@@ -1,4 +1,4 @@
-const ConnectionPage = () => {
+function ConnectionPage() {
   return (
     <div>
       <div className="flex justify-center">
@@ -17,6 +17,7 @@ const ConnectionPage = () => {
         <img
           className="hidden md:block"
           src="../public/assets/images/jacqueline.png"
+          alt="logo"
         />
         <div className="flex flex-col gap-8 justify-center flex-wrap ">
           <h2 className="text-secondary text-xl">Se connecter</h2>
@@ -50,6 +51,6 @@ const ConnectionPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ConnectionPage;
