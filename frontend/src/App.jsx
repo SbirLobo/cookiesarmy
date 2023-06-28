@@ -1,9 +1,10 @@
 import "./index.css";
+import ConnectionPage from "./services/Pages/ConnectionPage";
 
 function App() {
   return (
-    <div className="App font-bold italic">
-      <p>coucou</p>
+    <div>
+      <ConnectionPage />
     </div>
   );
 }

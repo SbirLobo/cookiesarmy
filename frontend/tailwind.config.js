@@ -4,13 +4,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ["Raleway, sans-serif"],
+        poppins: ["Poppins, sans-serif"],
       },
     },
     colors: {
-      primary: "#202020",
-      secondary: "#FFFFFF",
-      tertiary: "#e4c467",
+      primary: "#002743",
+      secondary: "#E62460",
+      tertiary: "#00ACB0",
+      quaternary: "#FFCC38",
+      quinary: "#EBEBEB",
     },
   },
   plugins: [],
