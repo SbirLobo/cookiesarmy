@@ -1,69 +1,63 @@
 const models = require("../models");
 
-const browse = (req, res) => {
-  models.mobile
-    .findAll()
-    .then(([rows]) => {
-      res.send(rows);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+const browse = async (req, res) => {
+  try {
+    const [mobile] = await models.mobile.findAll();
+    res.status(200).json({ mobile });
+  } catch (err) {
+    res.status(500).send("Oups, le serveur est en panne");
+  }
 };
 
-const read = (req, res) => {
-  models.mobile
-    .find(req.params.id)
-    .then(([rows]) => {
-      if (rows[0] == null) {
-        res.sendStatus(404);
-      } else {
-        res.send(rows[0]);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+const read = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const [mobile] = await models.mobile.find(id);
+    res.status(200).json({ mobile });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Oups, le serveur est en panne");
+  }
 };
 
-const edit = (req, res) => {
+const edit = async (req, res) => {
   const mobile = req.body;
-
-  // TODO validations (length, format...)
 
   mobile.id = parseInt(req.params.id, 10);
+  // const { id } = req.params.id;
 
-  models.mobile
-    .update(mobile)
-    .then(([result]) => {
-      if (result.affectedRows === 0) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  try {
+    const update = await models.mobile.update(mobile);
+
+    if (update[0].affectedRows === 1) {
+      res.status(200).json({ message: "Les informations ont été modifiées" });
+    } else {
+      res
+        .status(500)
+        .json({ message: "Nous n'avons pas pu modifier les informations" });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Oups, le serveur est en panne");
+  }
 };
 
-const add = (req, res) => {
+const add = async (req, res) => {
   const mobile = req.body;
 
-  // TODO validations (length, format...)
-
-  models.mobile
-    .insert(mobile)
-    .then(([result]) => {
-      res.location(`/mobiles/${result.insertId}`).sendStatus(201);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
+  try {
+    const create = await models.mobile.insert(mobile);
+    if (create[0].affectedRows === 1) {
+      res.status(200).json({ message: "Le téléphone a bien été enregistré" });
+    } else {
+      res
+        .status(500)
+        .json({ message: "Nous n'avons pas pu ajouter le téléphone" });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Oups, le serveur est en panne");
+  }
 };
 
 const destroy = (req, res) => {
