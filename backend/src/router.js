@@ -2,12 +2,21 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+const mobileControllers = require("./controllers/mobileControllers");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/home", (req, res) => {
+  try {
+    res.status(200).send("Hello world !");
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(401);
+  }
+});
+
+router.get("/mobiles", mobileControllers.browse);
+router.get("/mobiles/:id", mobileControllers.read);
+router.put("/mobiles/:id", mobileControllers.edit);
+router.post("/mobiles", mobileControllers.add);
+router.delete("/mobiles/:id", mobileControllers.destroy);
 
 module.exports = router;
