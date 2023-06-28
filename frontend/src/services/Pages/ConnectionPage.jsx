@@ -2,8 +2,8 @@ const ConnectionPage = () => {
   return (
     <div>
       <div className="flex justify-center">
-        <div className=" md:w-1/4 md:p-2 m-5 w-1/2 rounded border">
-          <h2>
+        <div className=" md:w-1/4 md:p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
+          <h2 className="font-bold">
             Bienvenu sur <span className="text-secondary">Emmaus Connect</span>{" "}
             !
           </h2>
@@ -16,7 +16,7 @@ const ConnectionPage = () => {
       <div className="flex items-center justify-center md:justify-between flex-wrap md:mx-16 lg:mx-32 xl:mx-56">
         <img
           className="hidden md:block"
-          src="/src/assets/images/jacqueline.png"
+          src="../public/assets/images/jacqueline.png"
         />
         <div className="flex flex-col gap-8 justify-center flex-wrap ">
           <h2 className="text-secondary text-xl">Se connecter</h2>
