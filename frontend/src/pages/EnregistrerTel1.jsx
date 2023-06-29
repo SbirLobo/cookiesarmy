@@ -1,20 +1,32 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel1() {
-  const { form, handleChange } = useContext(CurrentFormContext);
+  const { mobile, handleChangeMobile } = useInfoMobile();
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
+  const [invisible, setInvisible] = useState("invisible");
+  useEffect(() => {
+    if (
+      mobile.marque !==
+      mobile.reseau !== "" &&
+      mobile.ram_go !== 0 &&
+      mobile.stockage_go !== 0 &&
+      mobile.etat !== ""
+    ) {
+      setInvisible("");
+    }
+  }, [mobile]);
   return (
     <Layout>
-      <div className="border-2 border-quaternary px-3 m-5">
-        <div className="flex justify-between items-center">
+      <div className="border-2 rounded-lg border-quaternary px-3 m-5">
+        <div className="flex justify-between items-center pt-4">
           <h4 className="text-secondary font-bold p-4">1/3</h4>
+          <img src="./src/assets/head.png" alt="head" className="w-20" />
           <Link to="/home">
             <img src="../public/assets/favicon/croix.png" alt="Quitter" />
           </Link>
@@ -32,8 +44,8 @@ function EnregistrerTel1() {
                 required
                 name="marque"
                 id="marque"
-                value={form.marque}
-                onChange={handleChange}
+                value={mobile.marque}
+                onChange={handleChangeMobile}
                 className="rounded border w-36 sm:w-52  md:w-72"
               />
             </div>
@@ -45,8 +57,8 @@ function EnregistrerTel1() {
                 name="modele"
                 id="modele"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.modele}
-                onChange={handleChange}
+                value={mobile.modele}
+                onChange={handleChangeMobile}
               />
             </div>
           </div>
@@ -58,8 +70,8 @@ function EnregistrerTel1() {
               <select
                 name="reseau"
                 id="reseau"
-                value={form.reseau}
-                onChange={handleChange}
+                value={mobile.reseau}
+                onChange={handleChangeMobile}
                 className="rounded border w-36 sm:w-52  md:w-72"
               >
                 <option value="vide">---</option>
@@ -75,8 +87,8 @@ function EnregistrerTel1() {
                 name="stockage_go"
                 id="stockage_go"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.stockage_go}
-                onChange={handleChange}
+                value={mobile.stockage_go}
+                onChange={handleChangeMobile}
               >
                 <option value="vide">---</option>
                 <option value="16">16</option>
@@ -98,8 +110,8 @@ function EnregistrerTel1() {
                 name="ram_go"
                 id="ram_go"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.ram_go}
-                onChange={handleChange}
+                value={mobile.ram_go}
+                onChange={handleChangeMobile}
               >
                 <option value="vide">---</option>
                 <option value="1">1</option>
@@ -119,15 +131,15 @@ function EnregistrerTel1() {
                 name="etat"
                 id="etat"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.etat}
-                onChange={handleChange}
+                value={mobile.etat}
+                onChange={handleChangeMobile}
               >
                 <option value="na">---</option>
                 <option value="DEE">DEE</option>
-                <option value="réparable">Réparable</option>
-                <option value="bloqué">Bloqué</option>
-                <option value="reconditionable">Reconditionnable</option>
-                <option value="reconditionné">Reconditionné</option>
+                <option value="reparable">Réparable</option>
+                <option value="bloque">Bloqué</option>
+                <option value="reconditionnable">Reconditionnable</option>
+                <option value="reconditionne">Reconditionné</option>
                 <option value="neuf">Neuf</option>
               </select>
             </div>
@@ -137,7 +149,7 @@ function EnregistrerTel1() {
             <Link to="/enregistrer2">
               <button
                 type="submit"
-                className="bg-tertiary text-quinary rounded-full w-32"
+                className={`bg-tertiary text-quinary rounded-full w-32 ${invisible}`}
               >
                 Suivant
               </button>

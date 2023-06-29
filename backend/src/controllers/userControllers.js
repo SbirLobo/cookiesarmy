@@ -2,7 +2,7 @@ const models = require("../models");
 
 const browse = (req, res) => {
   models.user
-    .findAll()
+    .findAllUser()
     .then(([users]) => {
       res.json(users);
     })
@@ -14,7 +14,7 @@ const browse = (req, res) => {
 
 const read = (req, res) => {
   models.user
-    .find(req.params.id)
+    .findUser(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
         res.sendStatus(404);
@@ -78,10 +78,15 @@ const destroy = (req, res) => {
     });
 };
 
+const logout = (req, res) => {
+  res.clearCookie("appjwt").status(200).json({ message: "User logged out" });
+};
+
 module.exports = {
   browse,
   read,
   add,
   edit,
   destroy,
+  logout,
 };

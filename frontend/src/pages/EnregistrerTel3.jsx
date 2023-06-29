@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel3() {
-  const { form, handleChange } = useContext(CurrentFormContext);
+  const { mobile, handleChangeMobile } = useInfoMobile();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,8 +37,8 @@ function EnregistrerTel3() {
                 name="commentaire"
                 className="rounded border resize-none h-28 w-full"
                 id="commentaire"
-                value={form.commentaire}
-                onChange={handleChange}
+                value={mobile.commentaire}
+                onChange={handleChangeMobile}
               />
             </div>
           </div>
@@ -67,6 +66,9 @@ function EnregistrerTel3() {
                 Suivant
               </button>
             </Link>
+          </div>
+          <div className="flex justify-end">
+            <img src="./src/assets/head.png" alt="head" className="w-20" />
           </div>
           <p>* Champs obligatoires</p>
         </form>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
+import axios from "axios";
+// import { useInfoUser } from "../contexts/InfoUserContext";
 
 function TableauSmartphones() {
   const [smartphones, setSmartphones] = useState([]);
@@ -11,14 +13,18 @@ function TableauSmartphones() {
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // Tri par défaut : ordre croissant
 
+  // const API = `${import.meta.env.VITE_BACKEND_URL}/mobiles`;
+  const API = `http://localhost:5200/mobiles`;
+
   useEffect(() => {
-    fetch("Repertoire_Smartphones.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setSmartphones(data);
-        setFilteredSmartphones(data);
+    axios
+      .get(API, { withCredentials: true })
+      .then((res) => {
+        setSmartphones(res.data);
+        setFilteredSmartphones(res.data);
+        console.warn(res.data.message);
       })
-      .catch((error) => console.error(error));
+      .catch((err) => console.error(err.response.data.message));
   }, []);
 
   // Calcul du nombre total de pages
@@ -164,7 +170,7 @@ function TableauSmartphones() {
         <div className="flex font-raleway font-thin text-navy">
           {/* Tableau */}
           <table className="border-collapse mr-20 ml-20">
-            <thead>
+            <thead className="text-left">
               <tr className="bg-secondary/80 text-primary">
                 <th className="py-2 px-4">Image</th>
                 <th className="py-2 px-4">Marque</th>
@@ -193,14 +199,14 @@ function TableauSmartphones() {
                   <td className="py-1 px-4 font-thin">
                     <img
                       src={smartphone.image}
-                      alt={smartphone.modèle}
+                      alt={smartphone.modele}
                       className="h-8 w-8"
                     />
                   </td>
                   <td className="py-1 px-4">{smartphone.marque}</td>
-                  <td className="py-1 px-4">{smartphone.modèle}</td>
-                  <td className="py-1 px-4">{smartphone.stockage}</td>
-                  <td className="py-1 px-4">{smartphone.catégorie}</td>
+                  <td className="py-1 px-4">{smartphone.modele}</td>
+                  <td className="py-1 px-4">{smartphone.stockage_go}</td>
+                  <td className="py-1 px-4">{smartphone.categorie}</td>
                   <td className="py-1 px-4">{smartphone.prix} €</td>
                   <td className="py-1 px-4">{smartphone.ville}</td>
                 </tr>

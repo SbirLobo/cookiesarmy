@@ -34,22 +34,14 @@ const parametresPrix = {
     correct: 50,
     BE: 100,
   },
-  date_entree: {
-    periode: 6,
-    remise: 5,
-  },
   reseau: {
     3: 0,
     4: 70,
     5: 100,
   },
-  annee_prod: {
-    basePoint: 100,
-    decotePoint: 20,
-  },
   ecouteurs: {
-    non: 0,
-    oui: 40,
+    false: 0,
+    true: 40,
   },
   categorie: {
     0: 1,
