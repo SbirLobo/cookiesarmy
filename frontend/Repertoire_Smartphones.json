@@ -5,7 +5,10 @@
     "modèle": "Galaxy S21",
     "catégorie": "Bon état",
     "date_ajout": "01/06/2023",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "10",
+    "stockage": "128 Go",
+    "ville": "Paris"
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "modèle": "iPhone 12",
     "catégorie": "Très bon état",
     "date_ajout": "06/03/2023",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "25",
+    "stockage": "256 Go",
+    "ville": "Marseille"
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "modèle": "Mi 11",
     "catégorie": "Mauvais état",
     "date_ajout": "14/02/2023",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "30",
+    "stockage": "64 Go",
+    "ville": "Lyon"
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "modèle": "9 Pro",
     "catégorie": "Très bon état",
     "date_ajout": "27/12/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "30",
+    "stockage": "256 Go",
+    "ville": "Bordeaux"
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "modèle": "Pixel 6",
     "catégorie": "Bon état",
     "date_ajout": "10/11/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "40",
+    "stockage": "128 Go",
+    "ville": "Toulouse"
   },
   {
     "id": 6,
@@ -45,7 +60,10 @@
     "modèle": "P30 Pro",
     "catégorie": "Bon état",
     "date_ajout": "18/09/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "50",
+    "stockage": "128 Go",
+    "ville": "Nice"
   },
   {
     "id": 7,
@@ -53,7 +71,10 @@
     "modèle": "Xperia 1 III",
     "catégorie": "Très bon état",
     "date_ajout": "25/07/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "60",
+    "stockage": "256 Go",
+    "ville": "Lille"
   },
   {
     "id": 8,
@@ -61,7 +82,10 @@
     "modèle": "G8 ThinQ",
     "catégorie": "Mauvais état",
     "date_ajout": "03/06/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "70",
+    "stockage": "64 Go",
+    "ville": "Strasbourg"
   },
   {
     "id": 9,
@@ -69,7 +93,10 @@
     "modèle": "Edge+",
     "catégorie": "Très bon état",
     "date_ajout": "11/04/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "80",
+    "stockage": "256 Go",
+    "ville": "Nantes"
   },
   {
     "id": 10,
@@ -77,7 +104,10 @@
     "modèle": "9 PureView",
     "catégorie": "Bon état",
     "date_ajout": "19/02/2022",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "20",
+    "stockage": "128 Go",
+    "ville": "Rennes"
   },
   {
     "id": 11,
@@ -85,7 +115,10 @@
     "modèle": "Key2",
     "catégorie": "Mauvais état",
     "date_ajout": "28/12/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "15",
+    "stockage": "64 Go",
+    "ville": "Grenoble"
   },
   {
     "id": 12,
@@ -93,7 +126,10 @@
     "modèle": "U12+",
     "catégorie": "Bon état",
     "date_ajout": "06/11/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "35",
+    "stockage": "128 Go",
+    "ville": "Montpellier"
   },
   {
     "id": 13,
@@ -101,7 +137,10 @@
     "modèle": "Legion Phone Duel 2",
     "catégorie": "Très bon état",
     "date_ajout": "14/09/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "45",
+    "stockage": "256 Go",
+    "ville": "Brest"
   },
   {
     "id": 14,
@@ -109,7 +148,10 @@
     "modèle": "ZenFone 8",
     "catégorie": "Bon état",
     "date_ajout": "22/07/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "55",
+    "stockage": "128 Go",
+    "ville": "Toulon"
   },
   {
     "id": 15,
@@ -117,7 +159,10 @@
     "modèle": "GT",
     "catégorie": "Mauvais état",
     "date_ajout": "30/05/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "65",
+    "stockage": "64 Go",
+    "ville": "Dijon"
   },
   {
     "id": 16,
@@ -125,7 +170,10 @@
     "modèle": "Find X3 Pro",
     "catégorie": "Très bon état",
     "date_ajout": "08/04/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "75",
+    "stockage": "256 Go",
+    "ville": "Avignon"
   },
   {
     "id": 17,
@@ -133,7 +181,10 @@
     "modèle": "X60 Pro+",
     "catégorie": "Bon état",
     "date_ajout": "16/02/2021",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "60",
+    "stockage": "128 Go",
+    "ville": "Nîmes"
   },
   {
     "id": 18,
@@ -141,7 +192,10 @@
     "modèle": "Razr 5G",
     "catégorie": "Très bon état",
     "date_ajout": "25/12/2020",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "25",
+    "stockage": "256 Go",
+    "ville": "Lorient"
   },
   {
     "id": 19,
@@ -149,7 +203,10 @@
     "modèle": "Axon 30 Ultra",
     "catégorie": "Bon état",
     "date_ajout": "03/11/2020",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "70",
+    "stockage": "128 Go",
+    "ville": "Rouen"
   },
   {
     "id": 20,
@@ -157,6 +214,9 @@
     "modèle": "F3",
     "catégorie": "Mauvais état",
     "date_ajout": "12/09/2020",
-    "image": "/assets/images/65756.svg"
+    "image": "/assets/images/65756.svg",
+    "prix": "50",
+    "stockage": "64 Go",
+    "ville": "Reims"
   }
 ]
