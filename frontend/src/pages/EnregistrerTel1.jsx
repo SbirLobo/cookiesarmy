@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
 
 function EnregistrerTel1() {
+  const { form, handleChange } = useContext(CurrentFormContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <Layout className="border-2 border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -9,7 +17,7 @@ function EnregistrerTel1() {
         <img src="../public/assets/favicon/croix.png" alt="Quitter" />
       </div>
       <h2 className="font-bold">Caractéristiques techniques du smartphone:</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
             <label htmlFor="marque">Marque* : </label>
@@ -18,6 +26,8 @@ function EnregistrerTel1() {
               type="text"
               name="marque"
               id="marque"
+              value={form.marque}
+              onChange={handleChange}
               className="rounded border w-36 sm:w-52  md:w-72"
             />
           </div>
@@ -29,18 +39,22 @@ function EnregistrerTel1() {
               name="modele"
               id="modele"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={form.modele}
+              onChange={handleChange}
             />
           </div>
         </div>
 
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
-            <label htmlFor="annee">Année* : </label>
+            <label htmlFor="annee_prod">Année* :</label>
             <br />
             <input
               type="text"
-              name="annee"
-              id="annee"
+              name="annee_prod"
+              id="annee_prod"
+              value={form.annee_prod}
+              onChange={handleChange}
               placeholder="Format JJ/MM/AAAA"
               className="rounded border w-36 sm:w-52  md:w-72"
             />
@@ -51,6 +65,8 @@ function EnregistrerTel1() {
             <select
               name="reseau"
               id="reseau"
+              value={form.reseau}
+              onChange={handleChange}
               className="rounded border w-36 sm:w-52  md:w-72"
             >
               <option value="vide">---</option>
@@ -66,9 +82,11 @@ function EnregistrerTel1() {
             <label htmlFor="ram">RAM* : </label>
             <br />
             <select
-              name="ram"
-              id="ram"
+              name="ram_go"
+              id="ram_go"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={form.ram_go}
+              onChange={handleChange}
             >
               <option value="vide">---</option>
               <option value="1">1</option>
@@ -85,10 +103,13 @@ function EnregistrerTel1() {
             <label htmlFor="stockage">Stockage* : </label>
             <br />
             <select
-              name="stockage"
-              id="stockage"
+              name="stockage_go"
+              id="stockage_go"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={form.stockage_go}
+              onChange={handleChange}
             >
+              <option value="vide">---</option>
               <option value="16">16</option>
               <option value="32">32</option>
               <option value="64">64</option>
@@ -103,7 +124,7 @@ function EnregistrerTel1() {
         <div className="flex justify-center m-5">
           <Link to="/enregistrer2">
             <button
-              type="button"
+              type="submit"
               className="bg-tertiary text-quinary rounded-full w-32"
             >
               Suivant
