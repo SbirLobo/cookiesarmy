@@ -1,16 +1,16 @@
 import Layout from "../components/Layout";
 
-function ConnectionPage() {
+function Inscription() {
   return (
     <Layout>
       <div className="flex justify-center">
         <div className=" md:w-1/4 md:p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
           <h2 className="font-bold">
-            Bienvenu sur <span className="text-secondary">Emmaus Connect</span>{" "}
-            !
+            Première fois chez
+            <span className="text-secondary"> Emmaus Connect</span> ?
           </h2>
           <p>
-            Ici, nous essayons d'aider les personnes défavorisées à accéder à un
+            Inscris-toi et aide les personnes défavorisées à accéder à un
             smartphone.
           </p>
         </div>
@@ -22,9 +22,21 @@ function ConnectionPage() {
           alt="logo"
         />
         <div className="flex flex-col gap-8 justify-center flex-wrap ">
-          <h2 className="text-secondary text-xl">Se connecter</h2>
-          <form className="flex flex-wrap flex-col gap-3 justify-center">
-            <label htmlFor="email">Identifiant :</label>
+          <h2 className="text-secondary text-xl">Inscription</h2>
+          <form className="flex flex-wrap flex-col gap-1 justify-center">
+            <label htmlFor="Prenom">Prénom :</label>
+            <input
+              type="text"
+              name="prenom"
+              className="rounded md:w-72 w-44 p-1 border"
+            />
+            <label htmlFor="Nom">Nom :</label>
+            <input
+              type="text"
+              name="Nom"
+              className="rounded md:w-72 w-44 p-1 border"
+            />
+            <label htmlFor="email">Adresse mail :</label>
             <input
               type="email"
               placeholder="admin@emmaus.fr"
@@ -54,5 +66,4 @@ function ConnectionPage() {
     </Layout>
   );
 }
-
-export default ConnectionPage;
+export default Inscription;

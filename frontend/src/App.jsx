@@ -7,6 +7,7 @@ import EnregistrerTel3 from "./pages/EnregistrerTel3";
 import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
 import { CurrentFormProvider } from "./components/CurrentFormContext";
+import Inscription from "./pages/Inscription";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
         <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
         <Route path="/resume" element={<ResumeTel />} />
+        <Route path="/inscription" element={<Inscription />} />
       </Routes>
     </CurrentFormProvider>
   );
