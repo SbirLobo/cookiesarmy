@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 
 function ConnectionPage() {
@@ -44,10 +45,11 @@ function ConnectionPage() {
             >
               Valider
             </button>
-
-            <h2 className="text-center text-quaternary cursor-pointer">
-              S'inscrire
-            </h2>
+            <Link to="/inscription">
+              <h2 className="text-center text-quaternary cursor-pointer">
+                S'inscrire
+              </h2>
+            </Link>
           </form>
         </div>
       </div>
