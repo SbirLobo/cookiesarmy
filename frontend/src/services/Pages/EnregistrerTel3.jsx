@@ -1,6 +1,6 @@
-const EnregistrerTel3 = () => {
+function EnregistrerTel3() {
   return (
-    <div className="border-2 border-quaternary px-3 m-5">
+    <div className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
         <img
           src="../public/assets/favicon/chevron.png"
@@ -17,7 +17,7 @@ const EnregistrerTel3 = () => {
           <label htmlFor="statut">Statut* : </label>
           <br />
           <select name="etat" className="rounded border w-36 sm:w-52  md:w-72">
-            <option value=""></option>
+            <option value="" />
             <option value="vendu">Vendu</option>
             <option value="stock">En stock</option>
           </select>
@@ -29,7 +29,7 @@ const EnregistrerTel3 = () => {
             type="text"
             name="taille"
             className="rounded border w-36 sm:w-52  md:w-72"
-          ></input>
+          />
         </div>
       </div>
 
@@ -42,7 +42,7 @@ const EnregistrerTel3 = () => {
             name="dateEntree"
             placeholder="Format JJ/MM/AAAA"
             className="rounded border w-36 sm:w-52  md:w-72"
-          ></input>
+          />
         </div>
       </div>
 
@@ -53,7 +53,7 @@ const EnregistrerTel3 = () => {
           <textarea
             name="commentaire"
             className="rounded border resize-none w-full"
-          ></textarea>
+          />
         </div>
       </div>
       <div className="p-3 lg:px-24">
@@ -81,6 +81,6 @@ const EnregistrerTel3 = () => {
       <p>* Champs obligatoires</p>
     </div>
   );
-};
+}
 
 export default EnregistrerTel3;

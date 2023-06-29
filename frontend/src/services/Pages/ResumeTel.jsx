@@ -1,8 +1,8 @@
 import data from "../Data/data";
 
-const ResumeTel = () => {
+function ResumeTel() {
   return (
-    <div className="border-2 border-quaternary px-3 m-5">
+    <div className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
         <img
           src="../public/assets/favicon/chevron.png"
@@ -60,6 +60,6 @@ const ResumeTel = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ResumeTel;
