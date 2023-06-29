@@ -1,5 +1,5 @@
-import { createContext } from "react";
-import { useState } from "react";
+import { createContext, useState } from "react";
+import PropTypes from "prop-types";
 
 const CurrentFormContext = createContext();
 
@@ -37,3 +37,7 @@ export function CurrentFormProvider({ children }) {
     </CurrentFormContext.Provider>
   );
 }
+
+CurrentFormProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

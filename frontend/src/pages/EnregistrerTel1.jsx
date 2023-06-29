@@ -8,7 +8,6 @@ function EnregistrerTel1() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
   };
 
   return (

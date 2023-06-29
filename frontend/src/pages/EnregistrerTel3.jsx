@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import CurrentFormContext from "../components/CurrentFormContext";
 import { Link } from "react-router-dom";
+import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
 
 function EnregistrerTel3() {
@@ -8,7 +8,6 @@ function EnregistrerTel3() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
   };
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">

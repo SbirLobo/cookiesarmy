@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import CurrentFormContext from "../components/CurrentFormContext";
 import { Link } from "react-router-dom";
+import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
 
 function EnregistrerTel2() {
@@ -8,7 +8,6 @@ function EnregistrerTel2() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
   };
 
   return (

@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import CurrentFormContext from "../components/CurrentFormContext";
-import data from "../Data/data";
 import Layout from "../components/Layout";
 
 function ResumeTel() {
-  const { form, handleChange } = useContext(CurrentFormContext);
+  const { form } = useContext(CurrentFormContext);
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
