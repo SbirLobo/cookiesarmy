@@ -13,7 +13,6 @@ import TableauSmartphones from "./pages/TableauSmartphones";
 import Faq from "./pages/FAQ";
 import UserProfile from "./pages/ProfileUser";
 
-
 function App() {
   return (
     <CurrentFormProvider>
