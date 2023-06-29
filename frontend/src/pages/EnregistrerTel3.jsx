@@ -68,6 +68,9 @@ function EnregistrerTel3() {
               </button>
             </Link>
           </div>
+          <div className="flex justify-end">
+            <img src="./src/assets/head.png" alt="head" className="w-20" />
+          </div>
           <p>* Champs obligatoires</p>
         </form>
       </div>

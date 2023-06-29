@@ -15,17 +15,17 @@ function Navbar() {
         </div>
         <div className="w-[8rem] text-primary h-1/3 flex flex-col items-center justify-around gap-4 font-semibold">
           <Link to="/enregistrer1" className="w-full text-center">
-            <h2 className="text-xs p-1 my-4 hover:text-quinary hover:bg-tertiary hover:rounded-full">
+            <h2 className="text-xs py-3 p-1 my-4 hover:text-primary hover:bg-tertiary hover:rounded-full">
               Ajout mobile
             </h2>
           </Link>
           <Link to="/TableauSmartphones" className="w-full text-center">
-            <h2 className="text-xs p-1 my-4 hover:text-quinary hover:bg-secondary hover:rounded-full">
+            <h2 className="text-xs py-3 p-1 my-4 hover:text-quinary hover:bg-secondary hover:rounded-full">
               Base de données
             </h2>
           </Link>
           <Link to="/FAQ" className="w-full text-center">
-            <h2 className="text-xs p-1 my-4 hover:text-quinary hover:bg-quaternary hover:rounded-full">
+            <h2 className="text-xs py-3 p-1 my-4 hover:text-primary hover:bg-quaternary hover:rounded-full">
               FAQ
             </h2>
           </Link>
