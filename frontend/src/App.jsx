@@ -1,10 +1,10 @@
 import "./index.css";
-import ConnectionPage from "./services/Pages/ConnectionPage";
+import ResumeTel from "./services/Pages/ResumeTel";
 
 function App() {
   return (
     <div>
-      <ConnectionPage />
+      <ResumeTel />
     </div>
   );
 }

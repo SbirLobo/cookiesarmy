@@ -1,0 +1,104 @@
+const EnregistrerTel1 = () => {
+  return (
+    <div className="border-2 border-quaternary px-3 m-5">
+      <div className="flex justify-between items-center">
+        <h4 className="text-secondary font-bold p-4">1/3</h4>
+        <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+      </div>
+
+      <h2 className="font-bold">Caractéristiques techniques du smartphone:</h2>
+      <div className="flex flex-wrap justify-between p-3 lg:px-24">
+        <div>
+          <label htmlFor="marque">Marque* : </label>
+          <br />
+          <input
+            type="text"
+            name="marque"
+            className="rounded border w-36 sm:w-52  md:w-72"
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="modèle">Modèle* : </label>
+          <br />
+          <input
+            type="text"
+            name="modèle"
+            className="rounded border w-36 sm:w-52  md:w-72"
+          ></input>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap justify-between p-3 lg:px-24">
+        <div>
+          <label htmlFor="année">Année* : </label>
+          <br />
+          <input
+            type="text"
+            name="annee"
+            placeholder="Format JJ/MM/AAAA"
+            className="rounded border w-36 sm:w-52  md:w-72"
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="Réseau">Réseau* : </label>
+          <br />
+          <select
+            name="réseau"
+            className="rounded border w-36 sm:w-52  md:w-72"
+          >
+            <option value=""></option>
+            <option value="3G">3G</option>
+            <option value="4G">4G</option>
+            <option value="5G">5G</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap justify-between p-3 lg:px-24">
+        <div>
+          <label htmlFor="RAM">RAM* : </label>
+          <br />
+          <select name="RAM" className="rounded border w-36 sm:w-52  md:w-72">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="stockage">Stockage* : </label>
+          <br />
+          <select
+            name="stockage"
+            className="rounded border w-36 sm:w-52  md:w-72"
+          >
+            <option value="16">16</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+            <option value="128">128</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
+            <option value="1024">1024</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="flex justify-center m-5">
+        <button
+          type="button"
+          className="bg-tertiary text-quinary rounded-full w-32"
+        >
+          Suivant
+        </button>
+      </div>
+      <p>* Champs obligatoires</p>
+    </div>
+  );
+};
+
+export default EnregistrerTel1;
