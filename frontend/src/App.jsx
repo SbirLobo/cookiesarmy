@@ -1,9 +1,10 @@
 import "./index.css";
+import TableauSmartphones from "./components/TableauSmartphones";
 
 function App() {
   return (
-    <div className="App font-bold italic">
-      <p>coucou</p>
+    <div className="App">
+      <TableauSmartphones />
     </div>
   );
 }

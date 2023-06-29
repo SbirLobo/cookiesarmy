@@ -1,37 +1,162 @@
 [
   {
+    "id": 1,
     "marque": "Samsung",
     "modèle": "Galaxy S21",
     "catégorie": "Bon état",
     "date_ajout": "01/06/2023",
-    "image": "url_de_l_image_samsung_galaxy_s21.jpg"
+    "image": "/assets/images/65756.svg"
   },
   {
+    "id": 2,
     "marque": "Apple",
     "modèle": "iPhone 12",
     "catégorie": "Très bon état",
     "date_ajout": "06/03/2023",
-    "image": "url_de_l_image_apple_iphone_12.jpg"
+    "image": "/assets/images/65756.svg"
   },
   {
+    "id": 3,
     "marque": "Xiaomi",
     "modèle": "Mi 11",
     "catégorie": "Mauvais état",
     "date_ajout": "14/02/2023",
-    "image": "url_de_l_image_xiaomi_mi_11.jpg"
+    "image": "/assets/images/65756.svg"
   },
   {
+    "id": 4,
     "marque": "OnePlus",
     "modèle": "9 Pro",
     "catégorie": "Très bon état",
     "date_ajout": "27/12/2022",
-    "image": "url_de_l_image_oneplus_9_pro.jpg"
+    "image": "/assets/images/65756.svg"
   },
   {
+    "id": 5,
     "marque": "Google",
     "modèle": "Pixel 6",
     "catégorie": "Bon état",
     "date_ajout": "10/11/2022",
-    "image": "url_de_l_image_google_pixel_6.jpg"
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 6,
+    "marque": "Huawei",
+    "modèle": "P30 Pro",
+    "catégorie": "Bon état",
+    "date_ajout": "18/09/2022",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 7,
+    "marque": "Sony",
+    "modèle": "Xperia 1 III",
+    "catégorie": "Très bon état",
+    "date_ajout": "25/07/2022",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 8,
+    "marque": "LG",
+    "modèle": "G8 ThinQ",
+    "catégorie": "Mauvais état",
+    "date_ajout": "03/06/2022",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 9,
+    "marque": "Motorola",
+    "modèle": "Edge+",
+    "catégorie": "Très bon état",
+    "date_ajout": "11/04/2022",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 10,
+    "marque": "Nokia",
+    "modèle": "9 PureView",
+    "catégorie": "Bon état",
+    "date_ajout": "19/02/2022",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 11,
+    "marque": "BlackBerry",
+    "modèle": "Key2",
+    "catégorie": "Mauvais état",
+    "date_ajout": "28/12/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 12,
+    "marque": "HTC",
+    "modèle": "U12+",
+    "catégorie": "Bon état",
+    "date_ajout": "06/11/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 13,
+    "marque": "Lenovo",
+    "modèle": "Legion Phone Duel 2",
+    "catégorie": "Très bon état",
+    "date_ajout": "14/09/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 14,
+    "marque": "ASUS",
+    "modèle": "ZenFone 8",
+    "catégorie": "Bon état",
+    "date_ajout": "22/07/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 15,
+    "marque": "Realme",
+    "modèle": "GT",
+    "catégorie": "Mauvais état",
+    "date_ajout": "30/05/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 16,
+    "marque": "Oppo",
+    "modèle": "Find X3 Pro",
+    "catégorie": "Très bon état",
+    "date_ajout": "08/04/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 17,
+    "marque": "Vivo",
+    "modèle": "X60 Pro+",
+    "catégorie": "Bon état",
+    "date_ajout": "16/02/2021",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 18,
+    "marque": "Motorola",
+    "modèle": "Razr 5G",
+    "catégorie": "Très bon état",
+    "date_ajout": "25/12/2020",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 19,
+    "marque": "ZTE",
+    "modèle": "Axon 30 Ultra",
+    "catégorie": "Bon état",
+    "date_ajout": "03/11/2020",
+    "image": "/assets/images/65756.svg"
+  },
+  {
+    "id": 20,
+    "marque": "Poco",
+    "modèle": "F3",
+    "catégorie": "Mauvais état",
+    "date_ajout": "12/09/2020",
+    "image": "/assets/images/65756.svg"
   }
 ]
