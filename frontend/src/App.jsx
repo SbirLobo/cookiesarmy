@@ -6,6 +6,7 @@ import EnregistrerTel2 from "./pages/EnregistrerTel2";
 import EnregistrerTel3 from "./pages/EnregistrerTel3";
 import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
+import Page404 from "./pages/Page404";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
       <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
       <Route path="/resume" element={<ResumeTel />} />
+      <Route path="*" element={<Page404 />} />
     </Routes>
   );
 }
