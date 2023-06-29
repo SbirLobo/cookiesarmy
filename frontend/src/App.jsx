@@ -1,11 +1,10 @@
 import "./index.css";
-
-import ResumeTel from "./services/Pages/ResumeTel";
+import EnregistrerTel2 from "./services/Pages/EnregistrerTel2";
 
 function App() {
   return (
     <div>
-      <ResumeTel />
+      <EnregistrerTel2 />
     </div>
   );
 }

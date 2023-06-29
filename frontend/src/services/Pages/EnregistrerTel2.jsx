@@ -55,14 +55,11 @@ function EnregistrerTel2() {
             placeholder="En pouce"
           />
         </div>
-        <div>
-          <label htmlFor="sim">Double sim : </label>
-          <br />
-          <select name="sim" className="rounded border w-36 sm:w-52  md:w-72">
-            <option value="" />
-            <option value="oui">Oui</option>
-            <option value="non">Non</option>
-          </select>
+        <div className="gap-5 items-center flex">
+          <label htmlFor="ecouteurs">Double Sim</label>
+
+          <input type="checkbox" name="ecouteursok" />
+          <label htmlFor="oui"></label>
         </div>
       </div>
 
@@ -76,14 +73,11 @@ function EnregistrerTel2() {
             className="rounded border w-36 sm:w-52  md:w-72"
           />
         </div>
-        <div>
+        <div className="gap-5 items-center flex">
           <label htmlFor="ecouteurs">Ecouteurs</label>
-          <div className="flex gap-3">
-            <input type="checkbox" name="ecouteursok" />
-            <label htmlFor="oui">Oui</label>
-            <input type="checkbox" name="ecouteursNok" />
-            <label htmlFor="non">Non</label>
-          </div>
+
+          <input type="checkbox" name="ecouteursok" />
+          <label htmlFor="oui"></label>
         </div>
       </div>
 
