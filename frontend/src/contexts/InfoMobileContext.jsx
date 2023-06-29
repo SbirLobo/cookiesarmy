@@ -1,18 +1,16 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const InfoMobileContext = createContext();
 
 export function InfoMobileProvider({ children }) {
   // const API = `${import.meta.env.VITE_BACKEND_URL}/mobiles`;
   const API = `http://localhost:5200/mobiles`;
-  const navigate = useNavigate();
   const current = new Date();
-  const date = `${current.getDate()}/${
+  const date = `${current.getFullYear()}/${
     current.getMonth() + 1
-  }/${current.getFullYear()}`;
+  }/${current.getDate()}`;
 
   const [mobile, setMobile] = useState({
     marque: "",
@@ -29,6 +27,7 @@ export function InfoMobileProvider({ children }) {
     ville: "",
     date_entree: date,
     commentaire: "",
+    prix: 0,
   });
 
   const handleChangeMobile = (e) => {
@@ -42,7 +41,7 @@ export function InfoMobileProvider({ children }) {
       .post(API, { ...mobile }, { withCredentials: true })
       .then((res) => {
         console.warn(res.data.message);
-        navigate("/home");
+        window.location.href = "/home";
       })
       .catch((err) => console.error(err.response.data.message));
   };

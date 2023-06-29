@@ -7,7 +7,7 @@ class MobileManager extends AbstractManager {
 
   insert(mobile) {
     return this.database.query(
-      `insert into ${this.table} (modele, marque, ram_go, stockage_go, etat, aspect, couleur, taille_p, reseau, ville, date_entree, image, ecouteurs, double_sim, commentaire, prix) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (modele, marque, ram_go, stockage_go, etat, aspect, couleur, taille_p, reseau, ville, date_entree, ecouteurs, double_sim, commentaire, prix) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         mobile.modele,
         mobile.marque,
@@ -20,7 +20,6 @@ class MobileManager extends AbstractManager {
         mobile.reseau,
         mobile.ville,
         mobile.date_entree,
-        mobile.image,
         mobile.ecouteurs,
         mobile.double_sim,
         mobile.commentaire,
@@ -31,7 +30,7 @@ class MobileManager extends AbstractManager {
 
   update(mobile) {
     return this.database.query(
-      `update ${this.table} set modele = ?, marque = ?, ram_go = ?, stockage_go = ?, etat = ?, aspect = ?, couleur = ?, taille_p = ?, reseau = ?, ville = ?, date_entree = ?, image = ?, ecouteurs = ?, double_sim = ?, commentaire = ?, prix = ? where id = ?`,
+      `update ${this.table} set modele = ?, marque = ?, ram_go = ?, stockage_go = ?, etat = ?, aspect = ?, couleur = ?, taille_p = ?, reseau = ?, ville = ?, date_entree = ?, ecouteurs = ?, double_sim = ?, commentaire = ?, prix = ? where id = ?`,
       [
         mobile.modele,
         mobile.marque,
@@ -44,7 +43,6 @@ class MobileManager extends AbstractManager {
         mobile.reseau,
         mobile.ville,
         mobile.date_entree,
-        mobile.image,
         mobile.ecouteurs,
         mobile.double_sim,
         mobile.commentaire,
