@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
