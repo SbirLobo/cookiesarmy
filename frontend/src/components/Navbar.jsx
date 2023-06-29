@@ -17,8 +17,12 @@ function Navbar() {
           <Link to="/enregistrer1">
             <h2 className="mb-[4rem] text-xs">Ajouter un smartphone</h2>
           </Link>
+         <Link to="/TableauSmartphones">
           <h2 className="mb-[4rem] text-xs">Base de données</h2>
+          </Link>
+          <Link to="/FAQ">
           <h2 className="text-xs">FAQ</h2>
+          </Link>
         </div>
         <div className="flex w-[8rem] justify-between mt-[3rem] mb-[4rem]">
           <img

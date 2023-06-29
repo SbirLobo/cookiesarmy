@@ -7,6 +7,7 @@ import EnregistrerTel3 from "./pages/EnregistrerTel3";
 import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
 import TableauSmartphones from "./pages/TableauSmartphones";
+import Faq from "./pages/FAQ";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" element={<ConnectionPage />} />
       <Route path="/Home" element={<Home />} />
       <Route path="/TableauSmartphones" element={<TableauSmartphones />} />
+      <Route path="/FAQ" element={<Faq />} />
       <Route path="/enregistrer1" element={<EnregistrerTel1 />} />
       <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
       <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
