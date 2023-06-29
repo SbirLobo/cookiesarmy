@@ -8,13 +8,12 @@ import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
 import Page404 from "./pages/Page404";
 import { CurrentFormProvider } from "./components/CurrentFormContext";
-import Inscription from "./pages/Inscription"
+import Inscription from "./pages/Inscription";
 import TableauSmartphones from "./pages/TableauSmartphones";
 import Faq from "./pages/FAQ";
 
 function App() {
   return (
-
     <CurrentFormProvider>
       <Routes>
         <Route path="/" element={<ConnectionPage />} />
