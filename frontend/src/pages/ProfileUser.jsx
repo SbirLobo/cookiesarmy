@@ -25,7 +25,7 @@ function UserProfile() {
 
   return (
     <Layout>
-      <div className="container mx-auto py-8">
+      <div className="container mx-auto py-8 text-primary">
         <h1 className="flex justify-center text-3xl font-bold mb-4 bg-tertiary/20">
           Profil utilisateur
         </h1>
