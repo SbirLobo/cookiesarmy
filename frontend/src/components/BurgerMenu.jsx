@@ -49,6 +49,11 @@ function BurgerMenu() {
         >
           <ul>
             <li>
+              <Link to="/">
+                <span className="text-[0.8rem]">Accueil</span>
+              </Link>
+            </li>
+            <li>
               <Link to="/enregistrer1">
                 <span className="text-[0.8rem] text-secondary">
                   Ajouter un smartphone
