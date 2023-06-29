@@ -12,12 +12,16 @@ function EnregistrerTel3() {
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
-        <img
-          src="../public/assets/favicon/chevron.png"
-          alt="précédent"
-          className="pt-2"
-        />
-        <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        <Link to="/enregistrer2">
+          <img
+            src="../public/assets/favicon/chevron.png"
+            alt="précédent"
+            className="pt-2"
+          />
+        </Link>
+        <Link to="/home">
+          <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        </Link>
       </div>
 
       <h3 className="text-secondary font-bold p-4">3/3</h3>

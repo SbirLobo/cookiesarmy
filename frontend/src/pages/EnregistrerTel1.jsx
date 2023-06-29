@@ -14,7 +14,9 @@ function EnregistrerTel1() {
     <Layout className="border-2 border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
         <h4 className="text-secondary font-bold p-4">1/3</h4>
-        <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        <Link to="/home">
+          <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        </Link>
       </div>
       <h2 className="font-bold">Caractéristiques techniques du smartphone:</h2>
       <form onSubmit={handleSubmit}>

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
 
@@ -7,12 +8,16 @@ function ResumeTel() {
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
-        <img
-          src="../public/assets/favicon/chevron.png"
-          alt="précédent"
-          className="pt-2"
-        />
-        <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        <Link to="/enregistrer3">
+          <img
+            src="../public/assets/favicon/chevron.png"
+            alt="précédent"
+            className="pt-2"
+          />
+        </Link>
+        <Link to="/home">
+          <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        </Link>
       </div>
       <h2 className="text-primary font-bold p-3">Résumé du smartphone</h2>
       <div className="flex p-2 justify-around">
