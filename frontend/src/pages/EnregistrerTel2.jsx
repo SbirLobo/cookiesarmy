@@ -1,72 +1,75 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel2() {
   const { mobile, handleChangeMobile } = useInfoMobile();
-
+  const [invisible, setInvisible] = useState("invisible");
+  useEffect(() => {
+    if (mobile.aspect !== "") {
+      setInvisible("");
+    }
+  }, [mobile]);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   return (
-    <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
-      <div className="flex justify-between items-center">
-        <Link to="/enregistrer1">
-          <img
-            src="../public/assets/favicon/chevron.png"
-            alt="précédent"
-            className="pt-2"
-          />
-        </Link>
-        <Link to="/home">
-          <img src="../public/assets/favicon/croix.png" alt="Quitter" />
-        </Link>
-      </div>
-
-      <h3 className="text-secondary font-bold p-4">2/3</h3>
-
-      <h2 className="font-bold p-4">
-        Caractéristiques générales du smartphone:
-      </h2>
-      <form onChange={handleSubmit}>
-        <div className="flex flex-wrap justify-between p-3 lg:px-24">
-          <div>
-            <label htmlFor="etat">Etat* : </label>
-            <br />
-            <select
-              name="etat"
-              id="etat"
-              className="rounded border w-36 sm:w-52  md:w-72"
-              value={mobile.etat}
-              onChange={handleChangeMobile}
-            >
-              <option value="na">---</option>
-              <option value="DEE">DEE</option>
-              <option value="réparable">Réparable</option>
-              <option value="bloqué">Bloqué</option>
-              <option value="reconditionable">Reconditionnable</option>
-              <option value="reconditionné">Reconditionné</option>
-              <option value="neuf">Neuf</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="aspect">Aspect* : </label>
-            <br />
-            <select
-              name="aspect"
-              id="aspect"
-              className="rounded border w-36 sm:w-52  md:w-72"
-              value={mobile.aspect}
-              onChange={handleChangeMobile}
-            >
-              <option value="na">---</option>
-              <option value="mauvais">Mauvais état</option>
-              <option value="correct">Correct</option>
-              <option value="bon">Bon état</option>
-            </select>
-          </div>
+    <Layout>
+      <div className="border-2 rounded-lg border-quaternary px-3 m-5">
+        <div className="flex justify-between items-center">
+          <Link to="/enregistrer1">
+            <img
+              src="../public/assets/favicon/chevron.png"
+              alt="précédent"
+              className="pt-2"
+            />
+          </Link>
+          <Link to="/home">
+            <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+          </Link>
         </div>
+
+        <h3 className="text-secondary font-bold p-4">2/3</h3>
+        <div className="flex flex-row justify-between">
+          <h2 className="font-bold p-4">
+            Caractéristiques générales du smartphone:
+          </h2>
+          <img src="./src/assets/head.png" alt="head" className="w-20" />
+        </div>
+        <form onChange={handleSubmit}>
+          <div className="flex flex-wrap justify-between p-3 lg:px-24">
+            <div>
+              <label htmlFor="ville">Ville : </label>
+              <br />
+              <input
+                type="text"
+                name="ville"
+                id="ville"
+                value={mobile.ville}
+                onChange={handleChangeMobile}
+                className="rounded border w-36 sm:w-52  md:w-72"
+              />
+            </div>
+            <div>
+              <label htmlFor="aspect">Aspect* : </label>
+              <br />
+              <select
+                name="aspect"
+                id="aspect"
+                className="rounded border w-36 sm:w-52  md:w-72"
+                value={mobile.aspect}
+                onChange={handleChangeMobile}
+              >
+                <option value="na">---</option>
+                <option value="ME">Mauvais état</option>
+                <option value="correct">Correct</option>
+                <option value="BE">Bon état</option>
+              </select>
+            </div>
+          </div>
+        </form>
 
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
@@ -98,9 +101,8 @@ function EnregistrerTel2() {
               onChange={handleChangeMobile}
               className="rounded border"
             >
-              <option value="na">---</option>
-              <option value="0">false</option>
-              <option value="1">true</option>
+              <option value="false">Non</option>
+              <option value="true">Oui</option>
             </select>
           </div>
         </div>
@@ -137,14 +139,14 @@ function EnregistrerTel2() {
           <Link to="/enregistrer3">
             <button
               type="submit"
-              className="bg-tertiary text-quinary rounded-full w-32"
+              className={`bg-tertiary text-quinary rounded-full w-32 ${invisible}`}
             >
               Suivant
             </button>
           </Link>
         </div>
         <p>* Champs obligatoires</p>
-      </form>
+      </div>
     </Layout>
   );
 }

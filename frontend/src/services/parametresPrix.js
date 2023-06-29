@@ -1,5 +1,5 @@
 const parametresPrix = {
-  ram: {
+  ram_go: {
     1: 0,
     2: 0,
     3: 0,
@@ -9,7 +9,7 @@ const parametresPrix = {
     12: 40,
     16: 40,
   },
-  stock: {
+  stockage_go: {
     4: 10,
     8: 20,
     16: 30,
@@ -34,22 +34,28 @@ const parametresPrix = {
     correct: 50,
     BE: 100,
   },
-  anciennete_emmaus: {
-    periode: 6,
-    remise: 5,
-  },
   reseau: {
-    troisG: 0,
-    quatreG: 70,
-    cinqG: 100,
+    3: 0,
+    4: 70,
+    5: 100,
   },
-  anciennete_mobile: {
-    basePoint: 100,
-    decotePoint: 20,
+  ecouteurs: {
+    false: 0,
+    true: 40,
   },
-  ecouteur: {
-    non: 0,
-    oui: 40,
+  categorie: {
+    0: 1,
+    90: 2,
+    165: 3,
+    255: 4,
+    375: 5,
+  },
+  prix: {
+    1: 10,
+    2: 25,
+    3: 35,
+    4: 50,
+    5: 80,
   },
 };
 

@@ -118,7 +118,7 @@ function TableauSmartphones() {
         {/* Bouton "Importer un fichier" */}
         <button
           type="button"
-          className="bg-tertiary text-quaternary/90 py-1 px-1 ml-20 mb-4 rounded-md font-raleway font-thin"
+          className="bg-secondary text-quinary py-1 px-1 ml-20 mb-4 rounded-md font-raleway font-thin"
         >
           Importer un fichier
         </button>
@@ -170,7 +170,7 @@ function TableauSmartphones() {
         <div className="flex font-raleway font-thin text-navy">
           {/* Tableau */}
           <table className="border-collapse mr-20 ml-20">
-            <thead>
+            <thead className="text-left">
               <tr className="bg-secondary/80 text-primary">
                 <th className="py-2 px-4">Image</th>
                 <th className="py-2 px-4">Marque</th>

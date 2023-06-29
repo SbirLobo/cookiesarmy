@@ -8,7 +8,7 @@ function ConnectionPage() {
   return (
     <Layout>
       <div className="flex justify-center">
-        <div className=" md:w-1/4 md:p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
+        <div className=" md:w-1/4 p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
           <h2 className="font-bold">
             Bienvenu sur <span className="text-secondary">Emmaus Connect</span>{" "}
             !

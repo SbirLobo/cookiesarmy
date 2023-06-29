@@ -9,21 +9,25 @@ export function InfoMobileProvider({ children }) {
   // const API = `${import.meta.env.VITE_BACKEND_URL}/mobiles`;
   const API = `http://localhost:5200/mobiles`;
   const navigate = useNavigate();
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
 
   const [mobile, setMobile] = useState({
     marque: "",
     modele: "",
     reseau: "",
-    ram_go: "",
-    stockage_go: "",
+    ram_go: 0,
+    stockage_go: 0,
     etat: "",
     aspect: "",
     taille_p: "",
-    double_sim: "",
+    double_sim: false,
     couleur: "",
-    ecouteurs: "",
+    ecouteurs: false,
     ville: "",
-    date_entree: "",
+    date_entree: date,
     commentaire: "",
   });
 
