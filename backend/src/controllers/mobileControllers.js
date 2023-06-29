@@ -3,7 +3,7 @@ const models = require("../models");
 const browse = async (req, res) => {
   try {
     const [mobile] = await models.mobile.findAll();
-    res.status(200).json({ mobile });
+    res.status(200).json(mobile);
   } catch (err) {
     res.status(500).send("Oups, le serveur est en panne");
   }
@@ -13,33 +13,33 @@ const read = async (req, res) => {
   const { id } = req.params;
   try {
     const [mobile] = await models.mobile.find(id);
-    res.status(200).json({ mobile });
+    res.status(200).json(mobile);
   } catch (err) {
     console.error(err);
     res.status(500).send("Oups, le serveur est en panne");
   }
 };
 
-const edit = async (req, res) => {
+const edit = (req, res) => {
   const mobile = req.body;
 
   mobile.id = parseInt(req.params.id, 10);
-  // const { id } = req.params.id;
 
-  try {
-    const update = await models.mobile.update(mobile);
-
-    if (update[0].affectedRows === 1) {
-      res.status(200).json({ message: "Les informations ont été modifiées" });
-    } else {
-      res
-        .status(500)
-        .json({ message: "Nous n'avons pas pu modifier les informations" });
-    }
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Oups, le serveur est en panne");
-  }
+  models.mobile
+    .update(mobile)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res
+          .send(204)
+          .json({ message: "Les informations ont bien été modifiées" });
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 };
 
 const add = async (req, res) => {
@@ -67,7 +67,7 @@ const destroy = (req, res) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
       } else {
-        res.sendStatus(204);
+        res.status(204).json({ message: "Le téléphone a bien été supprimé" });
       }
     })
     .catch((err) => {
