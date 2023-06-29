@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
 
 function EnregistrerTel3() {
+  const { form, handleChange } = useContext(CurrentFormContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -15,19 +22,21 @@ function EnregistrerTel3() {
 
       <h3 className="text-secondary font-bold p-4">3/3</h3>
       <h2 className="font-bold p-3">Elements informatifs:</h2>
-      <form>
+      <form onChange={handleSubmit}>
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
-            <label htmlFor="statut">Statut* : </label>
+            <label htmlFor="vendu">Vendu* : </label>
             <br />
             <select
-              name="etat"
+              name="vendu"
               className="rounded border w-36 sm:w-52  md:w-72"
-              id="etat"
+              id="vendu"
+              value={form.vendu}
+              onChange={handleChange}
             >
               <option value="vide">---</option>
-              <option value="vendu">Vendu</option>
-              <option value="stock">En stock</option>
+              <option value="Oui">Vendu</option>
+              <option value="Non">En stock</option>
             </select>
           </div>
           <div>
@@ -35,8 +44,10 @@ function EnregistrerTel3() {
             <br />
             <input
               type="text"
-              name="taille"
-              id="taille"
+              name="ville"
+              id="ville"
+              value={form.ville}
+              onChange={handleChange}
               className="rounded border w-36 sm:w-52  md:w-72"
             />
           </div>
@@ -44,14 +55,16 @@ function EnregistrerTel3() {
 
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
-            <label htmlFor="dateEntree">Date d'entrée : </label>
+            <label htmlFor="date_entree">Date d'entrée : </label>
             <br />
             <input
               type="text"
-              name="dateEntree"
+              name="date_entree"
               placeholder="Format JJ/MM/AAAA"
               className="rounded border w-36 sm:w-52  md:w-72"
-              id="dateEntree"
+              id="date_entree"
+              value={form.date_entree}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -64,6 +77,8 @@ function EnregistrerTel3() {
               name="commentaire"
               className="rounded border resize-none w-full"
               id="commentaire"
+              value={form.commentaire}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -81,7 +96,7 @@ function EnregistrerTel3() {
         <div className="flex justify-center m-5">
           <Link to="/resume">
             <button
-              type="button"
+              type="submit"
               className="bg-tertiary text-quinary rounded-full w-32"
             >
               Suivant

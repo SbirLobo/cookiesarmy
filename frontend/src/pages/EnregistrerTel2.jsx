@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
 
 function EnregistrerTel2() {
+  const { form, handleChange } = useContext(CurrentFormContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -18,7 +26,7 @@ function EnregistrerTel2() {
       <h2 className="font-bold p-4">
         Caractéristiques générales du smartphone:
       </h2>
-      <form>
+      <form onChange={handleSubmit}>
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
             <label htmlFor="etat">Etat* : </label>
@@ -27,6 +35,8 @@ function EnregistrerTel2() {
               name="etat"
               id="etat"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={form.etat}
+              onChange={handleChange}
             >
               <option value="na">---</option>
               <option value="DEE">DEE</option>
@@ -44,6 +54,8 @@ function EnregistrerTel2() {
               name="aspect"
               id="aspect"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={form.aspect}
+              onChange={handleChange}
             >
               <option value="na">---</option>
               <option value="mauvais">Mauvais état</option>
@@ -59,15 +71,28 @@ function EnregistrerTel2() {
             <br />
             <input
               type="text"
-              name="taille"
-              id="taille"
+              name="taille_p"
+              id="taille_p"
               className="rounded border w-36 sm:w-52  md:w-72"
               placeholder="En pouce"
+              value={form.taille_p}
+              onChange={handleChange}
             />
           </div>
           <div className="gap-5 items-center flex">
             <label htmlFor="sim">Double Sim</label>
-            <input type="checkbox" name="sim" id="sim" />
+            <select
+              type="checkbox"
+              name="double_sim"
+              id="double_sim"
+              value={form.double_sim}
+              onChange={handleChange}
+              className="rounded border"
+            >
+              <option value="na">---</option>
+              <option value="non">Non</option>
+              <option value="oui">Oui</option>
+            </select>
           </div>
         </div>
 
@@ -80,18 +105,30 @@ function EnregistrerTel2() {
               name="couleur"
               id="couleur"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={form.couleur}
+              onChange={handleChange}
             />
           </div>
           <div className="gap-5 items-center flex">
             <label htmlFor="ecouteurs">Ecouteurs</label>
-            <input type="checkbox" name="ecouteurs" id="ecouteurs" />
+            <select
+              name="ecouteurs"
+              id="ecouteurs"
+              value={form.ecouteurs}
+              onChange={handleChange}
+              className="rounded border"
+            >
+              <option value="na">---</option>
+              <option value="non">Non</option>
+              <option value="oui">Oui</option>
+            </select>
           </div>
         </div>
 
         <div className="flex justify-center m-5">
           <Link to="/enregistrer3">
             <button
-              type="button"
+              type="submit"
               className="bg-tertiary text-quinary rounded-full w-32"
             >
               Suivant

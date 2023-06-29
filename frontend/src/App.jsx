@@ -6,6 +6,7 @@ import EnregistrerTel2 from "./pages/EnregistrerTel2";
 import EnregistrerTel3 from "./pages/EnregistrerTel3";
 import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
+import { CurrentFormProvider } from "./components/CurrentFormContext";
 import TableauSmartphones from "./pages/TableauSmartphones";
 import Faq from "./pages/FAQ";
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
       <Route path="/resume" element={<ResumeTel />} />
     </Routes>
+
   );
 }
 
