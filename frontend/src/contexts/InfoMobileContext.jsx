@@ -43,7 +43,7 @@ export function InfoMobileProvider({ children }) {
       .post(API, { ...mobile }, { withCredentials: true })
       .then((res) => {
         console.warn(res.data.message);
-        navigate("/home");
+        window.location.href = "/home";
       })
       .catch((err) => console.error(err.response.data.message));
   };
