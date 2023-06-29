@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
@@ -12,8 +12,7 @@ function EnregistrerTel1() {
   const [invisible, setInvisible] = useState("invisible");
   useEffect(() => {
     if (
-      mobile.marque !==
-      mobile.reseau !== "" &&
+      (mobile.marque !== mobile.reseau) !== "" &&
       mobile.ram_go !== 0 &&
       mobile.stockage_go !== 0 &&
       mobile.etat !== ""
