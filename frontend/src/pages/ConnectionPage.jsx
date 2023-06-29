@@ -1,32 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
 import Layout from "../components/Layout";
+import { useInfoUser } from "../contexts/InfoUserContext";
 
 function ConnectionPage() {
-  // const API = `${import.meta.env.VITE_BACKEND_URL}/login`;
-  const API = `http://localhost:5200/login`;
-  const navigate = useNavigate();
-
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post(API, { ...user }, { withCredentials: true })
-      .then((res) => {
-        console.warn(res.data.message);
-        navigate("/home");
-      })
-      .catch((err) => console.error(err.response.data.message));
-  };
+  const { handleSubmitLogIn, handleChangeLogIn } = useInfoUser();
 
   return (
     <Layout>
@@ -52,7 +28,7 @@ function ConnectionPage() {
           <h2 className="text-secondary text-xl">Se connecter</h2>
           <form
             className="flex flex-wrap flex-col gap-3 justify-center"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmitLogIn}
           >
             <label htmlFor="email">Identifiant</label>
             <input
@@ -60,14 +36,14 @@ function ConnectionPage() {
               placeholder="admin@emmaus.fr"
               name="email"
               className="rounded md:w-72 w-44 p-1 border"
-              onChange={handleChange}
+              onChange={handleChangeLogIn}
             />
             <label htmlFor="password">Mot de passe</label>
             <input
               type="password"
               name="password"
               className="rounded md:w-72 p-1 border w-44"
-              onChange={handleChange}
+              onChange={handleChangeLogIn}
             />
 
             <button
