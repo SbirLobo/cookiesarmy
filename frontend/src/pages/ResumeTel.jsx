@@ -1,11 +1,53 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
+import parametresPrix from "../services/parametresPrix";
 
 function ResumeTel() {
-  const { form } = useContext(CurrentFormContext);
+  const { form, setForm } = useContext(CurrentFormContext);
+  let nextCategorie = 0;
+  const date1 = new Date(form.date_entree);
+  const diff =
+    Math.floor(
+      (Date.now() - date1) /
+        (1000 * 60 * 60 * 24 * 30) /
+        parametresPrix.date_entree.periode
+    ) * parametresPrix.date_entree.remise;
 
+  const basePoints =
+    parametresPrix.ram_go[form.ram_go] +
+    parametresPrix.stockage_go[form.stockage_go] +
+    parametresPrix.aspect[form.aspect] +
+    parametresPrix.reseau[Number(form.reseau[0])] +
+    parametresPrix.ecouteurs[form.ecouteurs];
+
+  const remise = Math.min(100, parametresPrix.etat[form.etat] + diff);
+
+  const points = Math.floor(basePoints * (1 - remise / 100));
+
+  if (points >= Number(Object.keys(parametresPrix.categorie)[4])) {
+    nextCategorie =
+      parametresPrix.categorie[Object.keys(parametresPrix.categorie)[4]];
+  } else if (points >= Object.keys(parametresPrix.categorie)[3]) {
+    nextCategorie =
+      parametresPrix.categorie[Object.keys(parametresPrix.categorie)[3]];
+  } else if (points >= Object.keys(parametresPrix.categorie)[2]) {
+    nextCategorie =
+      parametresPrix.categorie[Object.keys(parametresPrix.categorie)[2]];
+  } else if (points >= Object.keys(parametresPrix.categorie)[1]) {
+    nextCategorie =
+      parametresPrix.categorie[Object.keys(parametresPrix.categorie)[1]];
+  } else {
+    nextCategorie =
+      parametresPrix.categorie[Object.keys(parametresPrix.categorie)[0]];
+  }
+  useEffect(() => {
+    const nextForm = form;
+    nextForm.prix = parametresPrix.prix[nextCategorie];
+    setForm(nextForm);
+  }, []);
+  
   return (
     <Layout>
       <div className="border-2 rounded-lg border-quaternary px-3 m-5">
