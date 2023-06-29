@@ -1,11 +1,14 @@
 import "./index.css";
 import EnregistrerTel2 from "./services/Pages/EnregistrerTel2";
 
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <div>
-      <EnregistrerTel2 />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

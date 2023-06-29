@@ -13,6 +13,7 @@ module.exports = {
       tertiary: "#00ACB0",
       quaternary: "#FFCC38",
       quinary: "#EBEBEB",
+
     },
   },
   plugins: [],
