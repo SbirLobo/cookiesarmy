@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 
 function ResumeTel() {
   const { form } = useContext(CurrentFormContext);
+
   return (
     <Layout>
       <div className="border-2 rounded-lg border-quaternary px-3 m-5">

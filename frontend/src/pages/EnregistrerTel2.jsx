@@ -34,23 +34,16 @@ function EnregistrerTel2() {
         <form onChange={handleSubmit}>
           <div className="flex flex-wrap justify-between p-3 lg:px-24">
             <div>
-              <label htmlFor="etat">Etat* : </label>
+              <label htmlFor="ville">Ville : </label>
               <br />
-              <select
-                name="etat"
-                id="etat"
-                className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.etat}
+              <input
+                type="text"
+                name="ville"
+                id="ville"
+                value={form.ville}
                 onChange={handleChange}
-              >
-                <option value="na">---</option>
-                <option value="DEE">DEE</option>
-                <option value="réparable">Réparable</option>
-                <option value="bloqué">Bloqué</option>
-                <option value="reconditionable">Reconditionnable</option>
-                <option value="reconditionné">Reconditionné</option>
-                <option value="neuf">Neuf</option>
-              </select>
+                className="rounded border w-36 sm:w-52  md:w-72"
+              />
             </div>
             <div>
               <label htmlFor="aspect">Aspect* : </label>

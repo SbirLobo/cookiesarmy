@@ -9,6 +9,7 @@ function EnregistrerTel3() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <Layout>
       <div className="border-2 rounded-lg border-quaternary px-3 m-5">
@@ -28,41 +29,14 @@ function EnregistrerTel3() {
         <h3 className="text-secondary font-bold p-4">3/3</h3>
         <h2 className="font-bold p-3">Elements informatifs:</h2>
         <form onChange={handleSubmit}>
-          <div className="flex flex-wrap justify-between p-3 lg:px-24">
-            <div>
-              <label htmlFor="ville">Ville : </label>
-              <br />
-              <input
-                type="text"
-                name="ville"
-                id="ville"
-                value={form.ville}
-                onChange={handleChange}
-                className="rounded border w-36 sm:w-52  md:w-72"
-              />
-            </div>
-            <div>
-              <label htmlFor="date_entree">Date du jour* : </label>
-              <br />
-              <input
-                type="text"
-                name="date_entree"
-                placeholder="Format JJ/MM/AAAA"
-                className="rounded border w-36 sm:w-52  md:w-72"
-                id="date_entree"
-                value={form.date_entree}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
+          <div className="flex flex-wrap justify-between p-3 lg:px-24" />
           <div className=" p-3 lg:px-24">
             <div>
               <label htmlFor="commentaire">Commentaire : </label>
               <br />
               <textarea
                 name="commentaire"
-                className="rounded border resize-none w-full"
+                className="rounded border resize-none h-28 w-full"
                 id="commentaire"
                 value={form.commentaire}
                 onChange={handleChange}
@@ -84,7 +58,6 @@ function EnregistrerTel3() {
               </div>
             </div>
           </div>
-
           <div className="flex justify-center m-5">
             <Link to="/resume">
               <button
