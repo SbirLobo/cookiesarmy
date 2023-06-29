@@ -12,7 +12,8 @@ function EnregistrerTel1() {
   const [invisible, setInvisible] = useState("invisible");
   useEffect(() => {
     if (
-      (mobile.marque !== mobile.reseau) !== "" &&
+      mobile.marque !== "" &&
+      mobile.reseau !== "" &&
       mobile.ram_go !== 0 &&
       mobile.stockage_go !== 0 &&
       mobile.etat !== ""
