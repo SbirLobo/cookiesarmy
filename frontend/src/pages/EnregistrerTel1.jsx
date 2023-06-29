@@ -29,6 +29,7 @@ function EnregistrerTel1() {
               <br />
               <input
                 type="text"
+                required
                 name="marque"
                 id="marque"
                 value={form.marque}

@@ -1,21 +1,45 @@
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 
 export default function Home() {
   return (
     <Layout>
-      <div className="flex justify-around items-center">
-        <div className="overflow-hidden">
-          <ul className="flex justify-around items-center">
-            <li className="max-w-[10rem]">
-              <img src="../src/assets/images/image1.png" alt="image1" />
-            </li>
-            <li className="max-w-[10rem]">
-              <img src="../src/assets/images/image2.png" alt="image2" />
-            </li>
-            <li className="max-w-[10rem] pt-[1.2rem] ">
-              <img src="../src/assets/images/image3.png" alt="image3" />
-            </li>
-          </ul>
+      <div className="flex flex-wrap gap-24 justify-center">
+        <div className="w-44 xl:w-60">
+          <Link to="/enregistrer1">
+            <img
+              src="./public/assets/images/home-tel.png"
+              alt="ajouter un téléphone"
+              className="rounded-t-lg"
+            />
+            <h2 className="border p-5 text-center border-quinary rounded-b-lg shadow-md">
+              Ajouter un <span className="text-secondary">smartphone</span>
+            </h2>
+          </Link>
+        </div>
+        <div className="w-44 xl:w-60">
+          <Link to="/TableauSmartphones">
+            <img
+              src="./public/assets/images/home-bdd.png"
+              alt="voir les téléphones"
+              className="rounded-t-lg "
+            />
+            <h2 className="border p-5 text-center border-quinary rounded-b-lg shadow-md">
+              <span className="text-quaternary">Gérer</span> les smartphone
+            </h2>
+          </Link>
+        </div>
+        <div className="w-44 xl:w-60">
+          <Link to="/FAQ">
+            <img
+              src="./public/assets/images/home-faq.png"
+              alt="FAQ"
+              className="rounded-t-lg"
+            />
+            <h2 className="border p-5 text-center border-quinary rounded-b-lg shadow-md">
+              Foire aux <span className="text-tertiary">questions</span>
+            </h2>
+          </Link>
         </div>
       </div>
     </Layout>
