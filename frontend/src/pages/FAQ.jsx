@@ -27,9 +27,9 @@ function FAQ() {
         </h1>
         <div className="space-y-4">
           {faqData.map((item, index) => (
-            <div key={index}>
+            <div key={item.id}>
               <button
-              type="button"
+                type="button"
                 className="flex items-center justify-between bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md w-full focus:outline-none"
                 onClick={() => toggleQuestion(index)}
               >

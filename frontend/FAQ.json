@@ -1,21 +1,26 @@
 [
   {
+    "id": "1",
     "question": "Comment puis-je recevoir un appareil disponible sur un autre site ?",
     "answer": "Si vous souhaitez recevoir un appareil disponible sur un autre site, vous pouvez généralement passer commande en ligne et choisir l'option de livraison. Assurez-vous de vérifier les conditions de livraison, les frais éventuels et les délais estimés avant de finaliser votre commande."
   },
   {
+    "id": "2",
     "question": "Où trouver les documents de garantie ?",
     "answer": "Les documents de garantie sont généralement inclus avec l'appareil reconditionné lors de l'achat. Ils peuvent se trouver dans l'emballage d'origine, avec les accessoires ou dans une pochette distincte. Si vous ne trouvez pas les documents de garantie, contactez le vendeur ou le fournisseur pour obtenir des informations supplémentaires."
   },
   {
+    "id": "3",
     "question": "Comment enregistrer un nouvel appareil dans la base de données ?",
     "answer": "L'enregistrement d'un nouvel appareil dans la base de données dépend du système utilisé par le vendeur ou le fournisseur. Vous pouvez généralement trouver un formulaire d'enregistrement sur leur site web où vous devrez fournir des informations telles que le numéro de série de l'appareil, la date d'achat, vos coordonnées, etc. Suivez les instructions fournies pour compléter le processus d'enregistrement."
   },
   {
+    "id": "4",
     "question": "Quelle est la différence entre RAM et stockage mémoire ?",
     "answer": "La RAM (Random Access Memory) et le stockage mémoire (par exemple, le disque dur ou la mémoire flash) sont deux composants différents dans un appareil électronique. La RAM est utilisée pour stocker temporairement les données et les programmes en cours d'exécution, permettant un accès rapide aux informations. Le stockage mémoire, en revanche, est utilisé pour stocker de manière permanente les fichiers, les applications et les données même lorsque l'appareil est éteint. En résumé, la RAM joue un rôle crucial dans les performances et la vitesse d'exécution de l'appareil, tandis que le stockage mémoire est utilisé pour conserver les données à long terme."
   },
   {
+    "id": "5",
     "question": "Les appareils vendus sont-ils reconditionnés ?",
     "answer": "Oui, les appareils vendus sont des téléphones reconditionnés. Cela signifie qu'ils ont été préalablement utilisés, puis réparés, nettoyés et remis en état pour être revendus sur le marché. Les réparations peuvent inclure le remplacement de pièces défectueuses, la réparation des problèmes logiciels, la remise à neuf de l'écran et de la batterie, etc. Les téléphones reconditionnés offrent une alternative plus abordable par rapport aux appareils neufs tout en offrant des performances similaires."
   }
