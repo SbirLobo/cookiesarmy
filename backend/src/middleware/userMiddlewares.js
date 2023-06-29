@@ -29,7 +29,7 @@ const recognizeUser = (req, res, next) => {
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).send("Error retrieving data from database");
+      res.status(500).json({ message: err.message });
     });
 };
 

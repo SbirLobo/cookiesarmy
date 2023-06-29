@@ -23,6 +23,7 @@ const hashPassword = (req, res, next) => {
 };
 
 const verifyPassword = (req, res) => {
+
   argon2
     .verify(req.user.hashedPassword, req.body.password)
     .then((isVerified) => {

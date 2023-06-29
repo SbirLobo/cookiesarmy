@@ -33,9 +33,9 @@ class UserManager extends AbstractManager {
   }
 
   findByMail(user) {
-    return this.database.query(
-      `select * from ${this.table} where email="${user.email}"`
-    );
+    return this.database.query(`select * from ${this.table} where email= ?`, [
+      user.email,
+    ]);
   }
 }
 
