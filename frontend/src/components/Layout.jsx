@@ -8,9 +8,7 @@ function Layout({ children }) {
       <Navbar />
       <div className="flex flex-col justify-between w-full">
         <div />
-        <main className="w-full flex justify-around items-center ml-auto">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </div>
     </div>

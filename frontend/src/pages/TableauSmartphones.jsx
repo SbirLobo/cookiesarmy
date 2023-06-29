@@ -112,7 +112,7 @@ function TableauSmartphones() {
         {/* Bouton "Importer un fichier" */}
         <button
           type="button"
-          className="bg-tertiary text-quaternary/90 py-1 px-1 ml-20 mb-4 rounded-md font-raleway font-thin"
+          className="bg-secondary text-quinary py-1 px-1 ml-20 mb-4 rounded-md font-raleway font-thin"
         >
           Importer un fichier
         </button>
