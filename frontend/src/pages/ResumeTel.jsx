@@ -1,7 +1,10 @@
 import data from "../Data/data";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function ResumeTel() {
+  const { handleSubmit } = useInfoMobile();
+
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -14,7 +17,7 @@ function ResumeTel() {
       </div>
       <h2 className="text-primary font-bold p-3">Résumé du smartphone</h2>
       <div className="flex p-2 justify-around">
-        <lu className="list-none">
+        <ul className="list-none">
           <li>Modèle :</li>
           <li>Marque : </li>
           <li>RAM : </li>
@@ -25,11 +28,11 @@ function ResumeTel() {
           <li>Ville : </li>
           <li>Date d'entrée : </li>
           <li>Année : </li>
-        </lu>
+        </ul>
 
         {data.map((telephone) => (
           <>
-            <lu key={telephone.id} className="list-none">
+            <ul key={telephone.id} className="list-none">
               <li>{telephone.modele}</li>
               <li>{telephone.marque}</li>
               <li>{telephone.ram_go}</li>
@@ -40,7 +43,7 @@ function ResumeTel() {
               <li>{telephone.ville}</li>
               <li>{telephone.date_entree}</li>
               <li>{telephone.annee_prod}</li>
-            </lu>
+            </ul>
             <div className="flex flex-col justify-center items-center">
               <img src={telephone.image} alt={telephone.modele} />
               <h2 className="p-5 border text-center border-quinary shadow-lg rounded">
@@ -49,12 +52,14 @@ function ResumeTel() {
                   {telephone.prix} €
                 </span>
               </h2>
-              <button
-                type="button"
-                className="bg-tertiary text-quinary rounded-full w-32 mt-8"
-              >
-                Valider et enregistrer
-              </button>
+              <form onSubmit={handleSubmit}>
+                <button
+                  type="submit"
+                  className="bg-tertiary text-quinary rounded-full w-32 mt-8"
+                >
+                  Valider et enregistrer
+                </button>
+              </form>
             </div>
           </>
         ))}

@@ -12,7 +12,6 @@ export function InfoUserProvider({ children }) {
   const APILOGOUT = `http://localhost:5200/logout`;
   const navigate = useNavigate();
   const [loggedInUser, setLoggedInUser] = useState("");
-  // const [loggedOutUser, setLoggedOutUser] = useState(null);
 
   const [user, setUser] = useState({
     firstname: "",

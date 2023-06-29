@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel1() {
+  const { handleChangeMobile } = useInfoMobile();
+
   return (
     <Layout className="border-2 border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -15,10 +18,12 @@ function EnregistrerTel1() {
             <label htmlFor="marque">Marque* : </label>
             <br />
             <input
+              // required="required"
               type="text"
               name="marque"
               id="marque"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             />
           </div>
           <div>
@@ -29,6 +34,7 @@ function EnregistrerTel1() {
               name="modele"
               id="modele"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             />
           </div>
         </div>
@@ -39,10 +45,11 @@ function EnregistrerTel1() {
             <br />
             <input
               type="text"
-              name="annee"
+              name="annee_prod"
               id="annee"
               placeholder="Format JJ/MM/AAAA"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             />
           </div>
           <div>
@@ -52,6 +59,7 @@ function EnregistrerTel1() {
               name="reseau"
               id="reseau"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             >
               <option value="vide">---</option>
               <option value="3G">3G</option>
@@ -66,9 +74,10 @@ function EnregistrerTel1() {
             <label htmlFor="ram">RAM* : </label>
             <br />
             <select
-              name="ram"
+              name="ram_go"
               id="ram"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             >
               <option value="vide">---</option>
               <option value="1">1</option>
@@ -85,9 +94,10 @@ function EnregistrerTel1() {
             <label htmlFor="stockage">Stockage* : </label>
             <br />
             <select
-              name="stockage"
+              name="stockage_go"
               id="stockage"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             >
               <option value="16">16</option>
               <option value="32">32</option>

@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel2() {
+  const { handleChangeMobile } = useInfoMobile();
+
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -27,6 +30,7 @@ function EnregistrerTel2() {
               name="etat"
               id="etat"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             >
               <option value="na">---</option>
               <option value="DEE">DEE</option>
@@ -44,6 +48,7 @@ function EnregistrerTel2() {
               name="aspect"
               id="aspect"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             >
               <option value="na">---</option>
               <option value="mauvais">Mauvais état</option>
@@ -59,15 +64,21 @@ function EnregistrerTel2() {
             <br />
             <input
               type="text"
-              name="taille"
+              name="taille_p"
               id="taille"
               className="rounded border w-36 sm:w-52  md:w-72"
               placeholder="En pouce"
+              onChange={handleChangeMobile}
             />
           </div>
           <div className="gap-5 items-center flex">
             <label htmlFor="sim">Double Sim</label>
-            <input type="checkbox" name="sim" id="sim" />
+            <input
+              type="checkbox"
+              name="double_sim"
+              id="sim"
+              onChange={handleChangeMobile}
+            />
           </div>
         </div>
 
@@ -80,11 +91,17 @@ function EnregistrerTel2() {
               name="couleur"
               id="couleur"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             />
           </div>
           <div className="gap-5 items-center flex">
             <label htmlFor="ecouteurs">Ecouteurs</label>
-            <input type="checkbox" name="ecouteurs" id="ecouteurs" />
+            <input
+              type="checkbox"
+              name="ecouteurs"
+              id="ecouteurs"
+              onChange={handleChangeMobile}
+            />
           </div>
         </div>
 

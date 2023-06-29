@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel3() {
+  const { handleChangeMobile } = useInfoMobile();
+
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
@@ -21,9 +24,10 @@ function EnregistrerTel3() {
             <label htmlFor="statut">Statut* : </label>
             <br />
             <select
-              name="etat"
+              name="vendu"
               className="rounded border w-36 sm:w-52  md:w-72"
               id="etat"
+              onChange={handleChangeMobile}
             >
               <option value="vide">---</option>
               <option value="vendu">Vendu</option>
@@ -35,9 +39,10 @@ function EnregistrerTel3() {
             <br />
             <input
               type="text"
-              name="taille"
+              name="ville"
               id="taille"
               className="rounded border w-36 sm:w-52  md:w-72"
+              onChange={handleChangeMobile}
             />
           </div>
         </div>
@@ -48,10 +53,11 @@ function EnregistrerTel3() {
             <br />
             <input
               type="text"
-              name="dateEntree"
+              name="date_entree"
               placeholder="Format JJ/MM/AAAA"
               className="rounded border w-36 sm:w-52  md:w-72"
               id="dateEntree"
+              onChange={handleChangeMobile}
             />
           </div>
         </div>
@@ -64,6 +70,7 @@ function EnregistrerTel3() {
               name="commentaire"
               className="rounded border resize-none w-full"
               id="commentaire"
+              onChange={handleChangeMobile}
             />
           </div>
         </div>
