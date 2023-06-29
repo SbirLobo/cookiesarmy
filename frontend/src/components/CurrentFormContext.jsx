@@ -32,7 +32,10 @@ export function CurrentFormProvider({ children }) {
   };
 
   return (
-    <CurrentFormContext.Provider value={{ form, handleChange }}>
+    <CurrentFormContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
+      value={{ form, handleChange }}
+    >
       {children}
     </CurrentFormContext.Provider>
   );
