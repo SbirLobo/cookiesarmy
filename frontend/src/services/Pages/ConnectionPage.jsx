@@ -38,7 +38,7 @@ function ConnectionPage() {
 
             <button
               type="submit"
-              className="bg-tertiary rounded-lg text-quinary p-2 m-2"
+              className="bg-tertiary rounded-full text-quinary p-2 m-2"
             >
               Valider
             </button>
