@@ -7,10 +7,8 @@ import EnregistrerTel3 from "./pages/EnregistrerTel3";
 import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
 import Page404 from "./pages/Page404";
-import { CurrentFormProvider } from "./components/CurrentFormContext";
 import TableauSmartphones from "./pages/TableauSmartphones";
 import Faq from "./pages/FAQ";
-
 
 function App() {
   return (
@@ -25,7 +23,6 @@ function App() {
       <Route path="/resume" element={<ResumeTel />} />
       <Route path="*" element={<Page404 />} />
     </Routes>
-
   );
 }
 
