@@ -6,6 +6,10 @@ const CurrentFormContext = createContext();
 export default CurrentFormContext;
 
 export function CurrentFormProvider({ children }) {
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
   const [form, setForm] = useState({
     modele: "",
     marque: "",
@@ -19,7 +23,7 @@ export function CurrentFormProvider({ children }) {
     vendu: "",
     ville: "",
     date_entree: "",
-    annee_prod: "",
+    annee_prod: date,
     image: "",
     ecouteurs: "",
     double_sim: "",
@@ -34,7 +38,8 @@ export function CurrentFormProvider({ children }) {
   return (
     <CurrentFormContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
-      value={{ form, setForm, handleChange }}
+      value={{ form, handleChange, setForm }}
+
     >
       {children}
     </CurrentFormContext.Provider>

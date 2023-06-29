@@ -53,18 +53,6 @@ function EnregistrerTel1() {
 
           <div className="flex flex-wrap justify-between p-3 lg:px-24">
             <div>
-              <label htmlFor="annee_prod">Année* :</label>
-              <br />
-              <input
-                type="text"
-                name="annee_prod"
-                id="annee_prod"
-                value={form.annee_prod}
-                onChange={handleChange}
-                className="rounded border w-36 sm:w-52  md:w-72"
-              />
-            </div>
-            <div>
               <label htmlFor="reseau">Réseau* : </label>
               <br />
               <select
@@ -78,6 +66,26 @@ function EnregistrerTel1() {
                 <option value="3G">3G</option>
                 <option value="4G">4G</option>
                 <option value="5G">5G</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="stockage">Stockage* : </label>
+              <br />
+              <select
+                name="stockage_go"
+                id="stockage_go"
+                className="rounded border w-36 sm:w-52  md:w-72"
+                value={form.stockage_go}
+                onChange={handleChange}
+              >
+                <option value="vide">---</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+                <option value="64">64</option>
+                <option value="128">128</option>
+                <option value="256">256</option>
+                <option value="512">512</option>
+                <option value="1024">1024</option>
               </select>
             </div>
           </div>
@@ -105,23 +113,22 @@ function EnregistrerTel1() {
               </select>
             </div>
             <div>
-              <label htmlFor="stockage">Stockage* : </label>
+              <label htmlFor="etat">Etat* : </label>
               <br />
               <select
-                name="stockage_go"
-                id="stockage_go"
+                name="etat"
+                id="etat"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.stockage_go}
+                value={form.etat}
                 onChange={handleChange}
               >
-                <option value="vide">---</option>
-                <option value="16">16</option>
-                <option value="32">32</option>
-                <option value="64">64</option>
-                <option value="128">128</option>
-                <option value="256">256</option>
-                <option value="512">512</option>
-                <option value="1024">1024</option>
+                <option value="na">---</option>
+                <option value="DEE">DEE</option>
+                <option value="réparable">Réparable</option>
+                <option value="bloqué">Bloqué</option>
+                <option value="reconditionable">Reconditionnable</option>
+                <option value="reconditionné">Reconditionné</option>
+                <option value="neuf">Neuf</option>
               </select>
             </div>
           </div>
