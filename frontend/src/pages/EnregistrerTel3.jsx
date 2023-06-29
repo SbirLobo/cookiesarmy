@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
+
 function EnregistrerTel3() {
   return (
-    <div className="border-2 rounded-lg border-quaternary px-3 m-5">
+    <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
         <img
           src="../public/assets/favicon/chevron.png"
@@ -76,16 +79,18 @@ function EnregistrerTel3() {
         </div>
 
         <div className="flex justify-center m-5">
-          <button
-            type="button"
-            className="bg-tertiary text-quinary rounded-full w-32"
-          >
-            Suivant
-          </button>
+          <Link to="/resume">
+            <button
+              type="button"
+              className="bg-tertiary text-quinary rounded-full w-32"
+            >
+              Suivant
+            </button>
+          </Link>
         </div>
         <p>* Champs obligatoires</p>
       </form>
-    </div>
+    </Layout>
   );
 }
 

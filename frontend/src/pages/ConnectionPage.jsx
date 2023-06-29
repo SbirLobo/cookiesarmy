@@ -1,6 +1,8 @@
+import Layout from "../components/Layout";
+
 function ConnectionPage() {
   return (
-    <div>
+    <Layout>
       <div className="flex justify-center">
         <div className=" md:w-1/4 md:p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
           <h2 className="font-bold">
@@ -49,7 +51,7 @@ function ConnectionPage() {
           </form>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
