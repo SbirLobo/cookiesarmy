@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 
 function Inscription() {
   return (
     <Layout>
       <div className="flex justify-center">
-        <div className=" md:w-1/4 md:p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
+        <div className=" md:w-1/4 p-2 m-5 w-1/2 rounded border shadow-lg border-quinary">
           <h2 className="font-bold">
             Première fois chez
             <span className="text-secondary"> Emmaus Connect</span> ?
@@ -56,10 +57,11 @@ function Inscription() {
             >
               Valider
             </button>
-
-            <h2 className="text-center text-quaternary cursor-pointer">
-              S'inscrire
-            </h2>
+            <Link to="/">
+              <h2 className="text-center text-quaternary cursor-pointer">
+                Se connecter
+              </h2>
+            </Link>
           </form>
         </div>
       </div>

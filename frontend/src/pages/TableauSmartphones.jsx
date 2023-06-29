@@ -164,7 +164,7 @@ function TableauSmartphones() {
         <div className="flex font-raleway font-thin text-navy">
           {/* Tableau */}
           <table className="border-collapse mr-20 ml-20">
-            <thead>
+            <thead className="text-left">
               <tr className="bg-secondary/80 text-primary">
                 <th className="py-2 px-4">Image</th>
                 <th className="py-2 px-4">Marque</th>

@@ -7,22 +7,15 @@ import parametresPrix from "../services/parametresPrix";
 function ResumeTel() {
   const { form, setForm } = useContext(CurrentFormContext);
   let nextCategorie = 0;
-  const date1 = new Date(form.date_entree);
-  const diff =
-    Math.floor(
-      (Date.now() - date1) /
-        (1000 * 60 * 60 * 24 * 30) /
-        parametresPrix.date_entree.periode
-    ) * parametresPrix.date_entree.remise;
 
   const basePoints =
-    parametresPrix.ram_go[form.ram_go] +
-    parametresPrix.stockage_go[form.stockage_go] +
+    parametresPrix.ram_go[parseInt(form.ram_go, 10)] +
+    parametresPrix.stockage_go[parseInt(form.stockage_go, 10)] +
     parametresPrix.aspect[form.aspect] +
-    parametresPrix.reseau[Number(form.reseau[0])] +
+    parametresPrix.reseau[parseInt(form.reseau[0], 10)] +
     parametresPrix.ecouteurs[form.ecouteurs];
 
-  const remise = Math.min(100, parametresPrix.etat[form.etat] + diff);
+  const remise = Math.min(100, parametresPrix.etat[form.etat]);
 
   const points = Math.floor(basePoints * (1 - remise / 100));
 
@@ -51,7 +44,7 @@ function ResumeTel() {
   return (
     <Layout>
       <div className="border-2 rounded-lg border-quaternary px-3 m-5">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center pt-4">
           <Link to="/enregistrer3">
             <img
               src="../public/assets/favicon/chevron.png"
@@ -59,6 +52,7 @@ function ResumeTel() {
               className="pt-2"
             />
           </Link>
+          <img src="./src/assets/head.png" alt="head" className="w-20" />
           <Link to="/home">
             <img src="../public/assets/favicon/croix.png" alt="Quitter" />
           </Link>
@@ -66,20 +60,50 @@ function ResumeTel() {
         <h2 className="text-primary font-bold p-3">Résumé du smartphone</h2>
         <div className="flex p-2 justify-around">
           <ul>
-            <li>Modèle : {form.modele}</li>
-            <li>Marque : {form.marque}</li>
-            <li>RAM : {form.ram_go}</li>
-            <li>Stockage : {form.stockage_go}</li>
-            <li>Etat : {form.etat}</li>
-            <li>Aspect : {form.aspect}</li>
-            <li>Reseau : {form.reseau}</li>
-            <li>Vendu : {form.statut}</li>
-            <li>Ville : {form.ville}</li>
-            <li>Date d'entrée : {form.date_entree}</li>
-            <li>Année : {form.annee_prod}</li>
-            <li>Ecouteurs : {form.ecouteurs}</li>
-            <li>Double sim : {form.double_sim}</li>
-            <li>Commentaire : {form.commentaire}</li>
+            <li>
+              Modèle : <span className="font-bold">{form.modele}</span>
+            </li>
+            <li>
+              Marque : <span className="font-bold">{form.marque}</span>
+            </li>
+            <li>
+              RAM : <span className="font-bold">{form.ram_go}</span>
+            </li>
+            <li>
+              Stockage : <span className="font-bold">{form.stockage_go}</span>
+            </li>
+            <li>
+              Etat : <span className="font-bold">{form.etat}</span>
+            </li>
+            <li>
+              Aspect : <span className="font-bold">{form.aspect}</span>
+            </li>
+            <li>
+              Reseau : <span className="font-bold">{form.reseau}</span>
+            </li>
+            <li>
+              Vendu : <span className="font-bold">{form.statut}</span>
+            </li>
+            <li>
+              Ville : <span className="font-bold">{form.ville}</span>
+            </li>
+            <li>
+              Date d'entrée :{" "}
+              <span className="font-bold">{form.date_entree}</span>
+            </li>
+            <li>
+              Année : <span className="font-bold">{form.annee_prod}</span>
+            </li>
+            <li>
+              Ecouteurs : <span className="font-bold">{form.ecouteurs}</span>
+            </li>
+            <li>
+              Double sim : <span className="font-bold">{form.double_sim}</span>
+            </li>
+            <li>
+              Commentaire :{" "}
+              <span className="font-bold">{form.commentaire}</span>
+            </li>
           </ul>
           <div className="flex flex-col justify-center items-center">
             <img src={form.image} alt={form.modele} />
