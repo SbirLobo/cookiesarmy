@@ -1,16 +1,16 @@
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel2() {
-  const { form, handleChange } = useContext(CurrentFormContext);
+  const { mobile, handleChangeMobile } = useInfoMobile();
   const [invisible, setInvisible] = useState("invisible");
   useEffect(() => {
-    if (form.aspect !== "") {
+    if (mobile.aspect !== "") {
       setInvisible("");
     }
-  }, [form]);
+  }, [mobile]);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -47,8 +47,8 @@ function EnregistrerTel2() {
                 type="text"
                 name="ville"
                 id="ville"
-                value={form.ville}
-                onChange={handleChange}
+                value={mobile.ville}
+                onChange={handleChangeMobile}
                 className="rounded border w-36 sm:w-52  md:w-72"
               />
             </div>
@@ -59,8 +59,8 @@ function EnregistrerTel2() {
                 name="aspect"
                 id="aspect"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.aspect}
-                onChange={handleChange}
+                value={mobile.aspect}
+                onChange={handleChangeMobile}
               >
                 <option value="na">---</option>
                 <option value="ME">Mauvais état</option>
@@ -75,15 +75,21 @@ function EnregistrerTel2() {
           <div>
             <label htmlFor="taille">Taille d'écran : </label>
             <br />
-            <input
+            <select
               type="text"
               name="taille_p"
               id="taille_p"
               className="rounded border w-36 sm:w-52  md:w-72"
-              placeholder="En pouce"
-              value={form.taille_p}
-              onChange={handleChange}
-            />
+              value={mobile.taille_p}
+              onChange={handleChangeMobile}
+            >
+              <option value="0">---</option>
+              <option value="5">5''</option>
+              <option value="6">6''</option>
+              <option value="7">7''</option>
+              <option value="8">8''</option>
+              <option value="9">9''</option>
+            </select>
           </div>
           <div className="gap-5 items-center flex">
             <label htmlFor="sim">Double Sim</label>
@@ -91,8 +97,8 @@ function EnregistrerTel2() {
               type="checkbox"
               name="double_sim"
               id="double_sim"
-              value={form.double_sim}
-              onChange={handleChange}
+              value={mobile.double_sim}
+              onChange={handleChangeMobile}
               className="rounded border"
             >
               <option value="false">Non</option>
@@ -110,8 +116,8 @@ function EnregistrerTel2() {
               name="couleur"
               id="couleur"
               className="rounded border w-36 sm:w-52  md:w-72"
-              value={form.couleur}
-              onChange={handleChange}
+              value={mobile.couleur}
+              onChange={handleChangeMobile}
             />
           </div>
           <div className="gap-5 items-center flex">
@@ -119,8 +125,8 @@ function EnregistrerTel2() {
             <select
               name="ecouteurs"
               id="ecouteurs"
-              value={form.ecouteurs}
-              onChange={handleChange}
+              value={mobile.ecouteurs}
+              onChange={handleChangeMobile}
               className="rounded border"
             >
               <option value="false">Non</option>

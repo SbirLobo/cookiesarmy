@@ -1,21 +1,22 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
+
 import parametresPrix from "../services/parametresPrix";
 
 function ResumeTel() {
-  const { form, setForm } = useContext(CurrentFormContext);
+  const { mobile, handleSubmit, setMobile } = useInfoMobile();
   let nextCategorie = 0;
 
   const basePoints =
-    parametresPrix.ram_go[parseInt(form.ram_go, 10)] +
-    parametresPrix.stockage_go[parseInt(form.stockage_go, 10)] +
-    parametresPrix.aspect[form.aspect] +
-    parametresPrix.reseau[parseInt(form.reseau[0], 10)] +
-    parametresPrix.ecouteurs[form.ecouteurs];
+    parametresPrix.ram_go[parseInt(mobile.ram_go, 10)] +
+    parametresPrix.stockage_go[parseInt(mobile.stockage_go, 10)] +
+    parametresPrix.aspect[mobile.aspect] +
+    parametresPrix.reseau[parseInt(mobile.reseau[0], 10)] +
+    parametresPrix.ecouteurs[mobile.ecouteurs];
 
-  const remise = Math.min(100, parametresPrix.etat[form.etat]);
+  const remise = Math.min(100, parametresPrix.etat[mobile.etat]);
 
   const points = Math.floor(basePoints * (1 - remise / 100));
 
@@ -36,9 +37,9 @@ function ResumeTel() {
       parametresPrix.categorie[Object.keys(parametresPrix.categorie)[0]];
   }
   useEffect(() => {
-    const nextForm = form;
-    nextForm.prix = parametresPrix.prix[nextCategorie];
-    setForm(nextForm);
+    const nextMobile = mobile;
+    nextMobile.prix = parametresPrix.prix[nextCategorie];
+    setMobile(nextMobile);
   }, []);
 
   return (
@@ -61,62 +62,65 @@ function ResumeTel() {
         <div className="flex p-2 justify-around">
           <ul>
             <li>
-              Modèle : <span className="font-bold">{form.modele}</span>
+              Modèle : <span className="font-bold">{mobile.modele}</span>
             </li>
             <li>
-              Marque : <span className="font-bold">{form.marque}</span>
+              Marque : <span className="font-bold">{mobile.marque}</span>
             </li>
             <li>
-              RAM : <span className="font-bold">{form.ram_go}</span>
+              RAM : <span className="font-bold">{mobile.ram_go}</span>
             </li>
             <li>
-              Stockage : <span className="font-bold">{form.stockage_go}</span>
+              Stockage : <span className="font-bold">{mobile.stockage_go}</span>
             </li>
             <li>
-              Etat : <span className="font-bold">{form.etat}</span>
+              Etat : <span className="font-bold">{mobile.etat}</span>
             </li>
             <li>
-              Aspect : <span className="font-bold">{form.aspect}</span>
+              Aspect : <span className="font-bold">{mobile.aspect}</span>
             </li>
             <li>
-              Reseau : <span className="font-bold">{form.reseau}</span>
+              Reseau : <span className="font-bold">{mobile.reseau}</span>
             </li>
             <li>
-              Vendu : <span className="font-bold">{form.statut}</span>
+              Vendu : <span className="font-bold">{mobile.statut}</span>
             </li>
             <li>
-              Ville : <span className="font-bold">{form.ville}</span>
+              Ville : <span className="font-bold">{mobile.ville}</span>
             </li>
             <li>
               Date d'entrée :{" "}
-              <span className="font-bold">{form.date_entree}</span>
+              <span className="font-bold">{mobile.date_entree}</span>
             </li>
             <li>
-              Année : <span className="font-bold">{form.annee_prod}</span>
+              Année : <span className="font-bold">{mobile.annee_prod}</span>
             </li>
             <li>
-              Ecouteurs : <span className="font-bold">{form.ecouteurs}</span>
+              Ecouteurs : <span className="font-bold">{mobile.ecouteurs}</span>
             </li>
             <li>
-              Double sim : <span className="font-bold">{form.double_sim}</span>
+              Double sim :{" "}
+              <span className="font-bold">{mobile.double_sim}</span>
             </li>
             <li>
               Commentaire :{" "}
-              <span className="font-bold">{form.commentaire}</span>
+              <span className="font-bold">{mobile.commentaire}</span>
             </li>
           </ul>
           <div className="flex flex-col justify-center items-center">
-            <img src={form.image} alt={form.modele} />
+            <img src={mobile.image} alt={mobile.modele} />
             <h2 className="p-5 border text-center border-quinary shadow-lg rounded">
               Prix conseillé: <br />
-              <span className="text-secondary font-blod">{form.prix} €</span>
+              <span className="text-secondary font-blod">{mobile.prix} €</span>
             </h2>
-            <button
-              type="button"
-              className="bg-tertiary text-quinary rounded-full w-32 mt-8"
-            >
-              Valider et enregistrer
-            </button>
+            <form onSubmit={handleSubmit}>
+              <button
+                type="submit"
+                className="bg-tertiary text-quinary rounded-full w-32 mt-8"
+              >
+                Valider et enregistrer
+              </button>
+            </form>
           </div>
         </div>
       </div>

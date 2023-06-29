@@ -12,8 +12,9 @@ const {
 } = require("./controllers/authControllers");
 
 router.post("/login", recognizeUser, verifyPassword);
+router.get("/logout", userControllers.logout);
 
-router.post("/users", newUser, hashPassword, userControllers.add);
+router.post("/inscription", newUser, hashPassword, userControllers.add);
 router.get("/users", userControllers.browse);
 router.get("/users/:id", userControllers.read);
 router.put("/users/:id", userControllers.edit);

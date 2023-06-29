@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import { useInfoUser } from "../contexts/InfoUserContext";
 
 function ConnectionPage() {
+  const { handleSubmitLogIn, handleChange } = useInfoUser();
+
   return (
     <Layout>
       <div className="flex justify-center">
@@ -24,19 +27,24 @@ function ConnectionPage() {
         />
         <div className="flex flex-col gap-8 justify-center flex-wrap ">
           <h2 className="text-secondary text-xl">Se connecter</h2>
-          <form className="flex flex-wrap flex-col gap-3 justify-center">
+          <form
+            className="flex flex-wrap flex-col gap-3 justify-center"
+            onSubmit={handleSubmitLogIn}
+          >
             <label htmlFor="email">Identifiant :</label>
             <input
               type="email"
               placeholder="admin@emmaus.fr"
               name="email"
               className="rounded md:w-72 w-44 p-1 border"
+              onChange={handleChange}
             />
             <label htmlFor="password">Mot de passe :</label>
             <input
               type="password"
               name="password"
               className="rounded md:w-72 p-1 border w-44"
+              onChange={handleChange}
             />
 
             <button

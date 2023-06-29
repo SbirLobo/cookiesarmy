@@ -1,10 +1,10 @@
 import { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import CurrentFormContext from "../components/CurrentFormContext";
 import Layout from "../components/Layout";
+import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel1() {
-  const { form, handleChange } = useContext(CurrentFormContext);
+  const { mobile, handleChangeMobile } = useInfoMobile();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,14 +12,15 @@ function EnregistrerTel1() {
   const [invisible, setInvisible] = useState("invisible");
   useEffect(() => {
     if (
-      form.reseau !== "" &&
-      form.ram_go !== 0 &&
-      form.stockage_go !== 0 &&
-      form.etat !== ""
+      mobile.marque !==
+      mobile.reseau !== "" &&
+      mobile.ram_go !== 0 &&
+      mobile.stockage_go !== 0 &&
+      mobile.etat !== ""
     ) {
       setInvisible("");
     }
-  }, [form]);
+  }, [mobile]);
   return (
     <Layout>
       <div className="border-2 rounded-lg border-quaternary px-3 m-5">
@@ -43,8 +44,8 @@ function EnregistrerTel1() {
                 required
                 name="marque"
                 id="marque"
-                value={form.marque}
-                onChange={handleChange}
+                value={mobile.marque}
+                onChange={handleChangeMobile}
                 className="rounded border w-36 sm:w-52  md:w-72"
               />
             </div>
@@ -56,8 +57,8 @@ function EnregistrerTel1() {
                 name="modele"
                 id="modele"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.modele}
-                onChange={handleChange}
+                value={mobile.modele}
+                onChange={handleChangeMobile}
               />
             </div>
           </div>
@@ -69,8 +70,8 @@ function EnregistrerTel1() {
               <select
                 name="reseau"
                 id="reseau"
-                value={form.reseau}
-                onChange={handleChange}
+                value={mobile.reseau}
+                onChange={handleChangeMobile}
                 className="rounded border w-36 sm:w-52  md:w-72"
               >
                 <option value="vide">---</option>
@@ -86,8 +87,8 @@ function EnregistrerTel1() {
                 name="stockage_go"
                 id="stockage_go"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.stockage_go}
-                onChange={handleChange}
+                value={mobile.stockage_go}
+                onChange={handleChangeMobile}
               >
                 <option value="vide">---</option>
                 <option value="16">16</option>
@@ -109,8 +110,8 @@ function EnregistrerTel1() {
                 name="ram_go"
                 id="ram_go"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.ram_go}
-                onChange={handleChange}
+                value={mobile.ram_go}
+                onChange={handleChangeMobile}
               >
                 <option value="vide">---</option>
                 <option value="1">1</option>
@@ -130,8 +131,8 @@ function EnregistrerTel1() {
                 name="etat"
                 id="etat"
                 className="rounded border w-36 sm:w-52  md:w-72"
-                value={form.etat}
-                onChange={handleChange}
+                value={mobile.etat}
+                onChange={handleChangeMobile}
               >
                 <option value="na">---</option>
                 <option value="DEE">DEE</option>
