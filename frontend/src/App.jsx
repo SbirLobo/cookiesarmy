@@ -1,11 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import "./index.css";
-import TableauSmartphones from "./components/TableauSmartphones";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <TableauSmartphones />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+
   );
 }
 
