@@ -27,17 +27,15 @@ export function InfoMobileProvider({ children }) {
     ville: "",
     date_entree: "",
     commentaire: "",
-    // Pas sûr que l'on puisse faire ça comme ça ?
-    image: "",
-    prix: "",
   });
 
   const handleChangeMobile = (e) => {
+    e.preventDefault();
     setMobile({ ...mobile, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    // e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     axios
       .post(API, { ...mobile }, { withCredentials: true })
       .then((res) => {
@@ -48,8 +46,10 @@ export function InfoMobileProvider({ children }) {
   };
 
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <InfoMobileContext.Provider value={{ handleChangeMobile, handleSubmit }}>
+    <InfoMobileContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
+      value={{ handleChangeMobile, handleSubmit, mobile, setMobile }}
+    >
       {children}
     </InfoMobileContext.Provider>
   );

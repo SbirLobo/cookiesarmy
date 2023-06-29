@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel3() {
-  const { handleChangeMobile } = useInfoMobile();
+  const { mobile, handleChangeMobile } = useInfoMobile();
 
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
@@ -27,6 +27,7 @@ function EnregistrerTel3() {
               name="vendu"
               className="rounded border w-36 sm:w-52  md:w-72"
               id="etat"
+              value={mobile.vendu}
               onChange={handleChangeMobile}
             >
               <option value="vide">---</option>
@@ -42,6 +43,7 @@ function EnregistrerTel3() {
               name="ville"
               id="taille"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={mobile.ville}
               onChange={handleChangeMobile}
             />
           </div>
@@ -57,6 +59,7 @@ function EnregistrerTel3() {
               placeholder="Format JJ/MM/AAAA"
               className="rounded border w-36 sm:w-52  md:w-72"
               id="dateEntree"
+              value={mobile.date_entree}
               onChange={handleChangeMobile}
             />
           </div>
@@ -70,6 +73,7 @@ function EnregistrerTel3() {
               name="commentaire"
               className="rounded border resize-none w-full"
               id="commentaire"
+              value={mobile.commentaire}
               onChange={handleChangeMobile}
             />
           </div>

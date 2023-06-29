@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
 
 function EnregistrerTel2() {
-  const { handleChangeMobile } = useInfoMobile();
+  const { mobile, handleChangeMobile } = useInfoMobile();
 
   return (
     <Layout className="border-2 rounded-lg border-quaternary px-3 m-5">
@@ -30,6 +30,7 @@ function EnregistrerTel2() {
               name="etat"
               id="etat"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={mobile.etat}
               onChange={handleChangeMobile}
             >
               <option value="na">---</option>
@@ -48,6 +49,7 @@ function EnregistrerTel2() {
               name="aspect"
               id="aspect"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={mobile.aspect}
               onChange={handleChangeMobile}
             >
               <option value="na">---</option>
@@ -63,11 +65,12 @@ function EnregistrerTel2() {
             <label htmlFor="taille">Taille d'écran : </label>
             <br />
             <input
-              type="text"
+              type="int"
               name="taille_p"
               id="taille"
               className="rounded border w-36 sm:w-52  md:w-72"
               placeholder="En pouce"
+              value={mobile.taille_p}
               onChange={handleChangeMobile}
             />
           </div>
@@ -77,6 +80,7 @@ function EnregistrerTel2() {
               type="checkbox"
               name="double_sim"
               id="sim"
+              value={mobile.double_sim}
               onChange={handleChangeMobile}
             />
           </div>
@@ -91,6 +95,7 @@ function EnregistrerTel2() {
               name="couleur"
               id="couleur"
               className="rounded border w-36 sm:w-52  md:w-72"
+              value={mobile.couleur}
               onChange={handleChangeMobile}
             />
           </div>
@@ -100,6 +105,7 @@ function EnregistrerTel2() {
               type="checkbox"
               name="ecouteurs"
               id="ecouteurs"
+              value={mobile.ecouteurs}
               onChange={handleChangeMobile}
             />
           </div>
