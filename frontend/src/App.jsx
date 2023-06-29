@@ -1,22 +1,25 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./pages/Home";
 import "./index.css";
-import EnregistrerTel1 from "./Pages/EnregistrerTel1";
-import EnregistrerTel2 from "./Pages/EnregistrerTel2";
-import EnregistrerTel3 from "./Pages/EnregistrerTel3";
-import ConnectionPage from "./Pages/ConnectionPage";
-import ResumeTel from "./Pages/ResumeTel";
+import EnregistrerTel1 from "./pages/EnregistrerTel1";
+import EnregistrerTel2 from "./pages/EnregistrerTel2";
+import EnregistrerTel3 from "./pages/EnregistrerTel3";
+import ConnectionPage from "./pages/ConnectionPage";
+import ResumeTel from "./pages/ResumeTel";
+import { CurrentFormProvider } from "./components/CurrentFormContext";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<ConnectionPage />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/enregistrer1" element={<EnregistrerTel1 />} />
-      <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
-      <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
-      <Route path="/resume" element={<ResumeTel />} />
-    </Routes>
+    <CurrentFormProvider>
+      <Routes>
+        <Route path="/" element={<ConnectionPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/enregistrer1" element={<EnregistrerTel1 />} />
+        <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
+        <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
+        <Route path="/resume" element={<ResumeTel />} />
+      </Routes>
+    </CurrentFormProvider>
   );
 }
 
