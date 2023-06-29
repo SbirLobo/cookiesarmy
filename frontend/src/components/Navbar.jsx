@@ -1,16 +1,22 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <div className="flex w-[25%] flex-row">
       <div className="flex w-full flex-col justify-between items-center border-r-[2px] border-primary">
         <div className="">
-          <img
-            src="../src/assets/logo.png"
-            alt="logo"
-            className="w-[5rem] mt-8"
-          />
+          <Link to="/home">
+            <img
+              src="../src/assets/logo.png"
+              alt="logo"
+              className="w-[5rem] mt-8"
+            />
+          </Link>
         </div>
         <div className="mt-[10rem] w-[8rem] text-primary font-semibold">
-          <h2 className="mb-[4rem] text-xs">Ajouter un smartphone</h2>
+          <Link to="/enregistrer1">
+            <h2 className="mb-[4rem] text-xs">Ajouter un smartphone</h2>
+          </Link>
           <h2 className="mb-[4rem] text-xs">Base de données</h2>
           <h2 className="text-xs">FAQ</h2>
         </div>
