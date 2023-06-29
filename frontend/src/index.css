@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Raleway";
-  src: url("/fonts/Raleway-Regular.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("../public/assets/fonts/Poppins-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
