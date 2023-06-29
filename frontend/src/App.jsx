@@ -7,19 +7,22 @@ import EnregistrerTel3 from "./pages/EnregistrerTel3";
 import ConnectionPage from "./pages/ConnectionPage";
 import ResumeTel from "./pages/ResumeTel";
 import { CurrentFormProvider } from "./components/CurrentFormContext";
+import TableauSmartphones from "./pages/TableauSmartphones";
+import Faq from "./pages/FAQ";
 
 function App() {
   return (
-    <CurrentFormProvider>
-      <Routes>
-        <Route path="/" element={<ConnectionPage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/enregistrer1" element={<EnregistrerTel1 />} />
-        <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
-        <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
-        <Route path="/resume" element={<ResumeTel />} />
-      </Routes>
-    </CurrentFormProvider>
+    <Routes>
+      <Route path="/" element={<ConnectionPage />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/TableauSmartphones" element={<TableauSmartphones />} />
+      <Route path="/FAQ" element={<Faq />} />
+      <Route path="/enregistrer1" element={<EnregistrerTel1 />} />
+      <Route path="/enregistrer2" element={<EnregistrerTel2 />} />
+      <Route path="/enregistrer3" element={<EnregistrerTel3 />} />
+      <Route path="/resume" element={<ResumeTel />} />
+    </Routes>
+
   );
 }
 
