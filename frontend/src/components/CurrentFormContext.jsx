@@ -34,7 +34,7 @@ export function CurrentFormProvider({ children }) {
   return (
     <CurrentFormContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
-      value={{ form, handleChange }}
+      value={{ form, setForm, handleChange }}
     >
       {children}
     </CurrentFormContext.Provider>

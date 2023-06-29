@@ -40,10 +40,10 @@ function EnregistrerTel2() {
             >
               <option value="na">---</option>
               <option value="DEE">DEE</option>
-              <option value="réparable">Réparable</option>
-              <option value="bloqué">Bloqué</option>
-              <option value="reconditionable">Reconditionnable</option>
-              <option value="reconditionné">Reconditionné</option>
+              <option value="reparable">Réparable</option>
+              <option value="bloque">Bloqué</option>
+              <option value="reconditionnable">Reconditionnable</option>
+              <option value="reconditionne">Reconditionné</option>
               <option value="neuf">Neuf</option>
             </select>
           </div>
@@ -58,9 +58,9 @@ function EnregistrerTel2() {
               onChange={handleChange}
             >
               <option value="na">---</option>
-              <option value="mauvais">Mauvais état</option>
+              <option value="ME">Mauvais état</option>
               <option value="correct">Correct</option>
-              <option value="bon">Bon état</option>
+              <option value="BE">Bon état</option>
             </select>
           </div>
         </div>
