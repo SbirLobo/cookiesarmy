@@ -29,6 +29,7 @@ export function InfoMobileProvider({ children }) {
     ville: "",
     date_entree: date,
     commentaire: "",
+    prix: "",
   });
 
   const handleChangeMobile = (e) => {
