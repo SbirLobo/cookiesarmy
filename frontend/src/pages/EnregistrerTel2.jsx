@@ -28,7 +28,6 @@ function EnregistrerTel2() {
 
         <h3 className="text-secondary font-bold p-4">2/3</h3>
 
-
         <h2 className="font-bold p-4">
           Caractéristiques générales du smartphone:
         </h2>
@@ -63,48 +62,48 @@ function EnregistrerTel2() {
               </select>
             </div>
           </div>
-
-      <h2 className="font-bold p-4">
-        Caractéristiques générales du smartphone:
-      </h2>
-      <form onChange={handleSubmit}>
-        <div className="flex flex-wrap justify-between p-3 lg:px-24">
-          <div>
-            <label htmlFor="etat">Etat* : </label>
-            <br />
-            <select
-              name="etat"
-              id="etat"
-              className="rounded border w-36 sm:w-52  md:w-72"
-              value={form.etat}
-              onChange={handleChange}
-            >
-              <option value="na">---</option>
-              <option value="DEE">DEE</option>
-              <option value="reparable">Réparable</option>
-              <option value="bloque">Bloqué</option>
-              <option value="reconditionnable">Reconditionnable</option>
-              <option value="reconditionne">Reconditionné</option>
-              <option value="neuf">Neuf</option>
-            </select>
+        </form>
+        <h2 className="font-bold p-4">
+          Caractéristiques générales du smartphone:
+        </h2>
+        <form onChange={handleSubmit}>
+          <div className="flex flex-wrap justify-between p-3 lg:px-24">
+            <div>
+              <label htmlFor="etat">Etat* : </label>
+              <br />
+              <select
+                name="etat"
+                id="etat"
+                className="rounded border w-36 sm:w-52  md:w-72"
+                value={form.etat}
+                onChange={handleChange}
+              >
+                <option value="na">---</option>
+                <option value="DEE">DEE</option>
+                <option value="reparable">Réparable</option>
+                <option value="bloque">Bloqué</option>
+                <option value="reconditionnable">Reconditionnable</option>
+                <option value="reconditionne">Reconditionné</option>
+                <option value="neuf">Neuf</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="aspect">Aspect* : </label>
+              <br />
+              <select
+                name="aspect"
+                id="aspect"
+                className="rounded border w-36 sm:w-52  md:w-72"
+                value={form.aspect}
+                onChange={handleChange}
+              >
+                <option value="na">---</option>
+                <option value="ME">Mauvais état</option>
+                <option value="correct">Correct</option>
+                <option value="BE">Bon état</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <label htmlFor="aspect">Aspect* : </label>
-            <br />
-            <select
-              name="aspect"
-              id="aspect"
-              className="rounded border w-36 sm:w-52  md:w-72"
-              value={form.aspect}
-              onChange={handleChange}
-            >
-              <option value="na">---</option>
-              <option value="ME">Mauvais état</option>
-              <option value="correct">Correct</option>
-              <option value="BE">Bon état</option>
-            </select>
-          </div>
-        </div>
           <div className="flex flex-wrap justify-between p-3 lg:px-24">
             <div>
               <label htmlFor="taille">Taille d'écran : </label>

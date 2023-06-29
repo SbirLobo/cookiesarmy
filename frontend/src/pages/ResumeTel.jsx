@@ -47,7 +47,7 @@ function ResumeTel() {
     nextForm.prix = parametresPrix.prix[nextCategorie];
     setForm(nextForm);
   }, []);
-  
+
   return (
     <Layout>
       <div className="border-2 rounded-lg border-quaternary px-3 m-5">
