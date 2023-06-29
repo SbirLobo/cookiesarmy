@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useInfoUser } from "../contexts/InfoUserContext";
 
 function ConnectionPage() {
-  const { handleSubmitLogIn, handleChangeLogIn } = useInfoUser();
+  const { handleSubmitLogIn, handleChange } = useInfoUser();
 
   return (
     <Layout>
@@ -30,20 +31,20 @@ function ConnectionPage() {
             className="flex flex-wrap flex-col gap-3 justify-center"
             onSubmit={handleSubmitLogIn}
           >
-            <label htmlFor="email">Identifiant</label>
+            <label htmlFor="email">Identifiant :</label>
             <input
               type="email"
               placeholder="admin@emmaus.fr"
               name="email"
               className="rounded md:w-72 w-44 p-1 border"
-              onChange={handleChangeLogIn}
+              onChange={handleChange}
             />
-            <label htmlFor="password">Mot de passe</label>
+            <label htmlFor="password">Mot de passe :</label>
             <input
               type="password"
               name="password"
               className="rounded md:w-72 p-1 border w-44"
-              onChange={handleChangeLogIn}
+              onChange={handleChange}
             />
 
             <button
@@ -52,10 +53,11 @@ function ConnectionPage() {
             >
               Valider
             </button>
-
-            <h2 className="text-center text-quaternary cursor-pointer">
-              S'inscrire
-            </h2>
+            <Link to="/inscription">
+              <h2 className="text-center text-quaternary cursor-pointer">
+                S'inscrire
+              </h2>
+            </Link>
           </form>
         </div>
       </div>

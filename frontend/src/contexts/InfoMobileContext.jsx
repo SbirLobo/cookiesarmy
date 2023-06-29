@@ -13,7 +13,6 @@ export function InfoMobileProvider({ children }) {
   const [mobile, setMobile] = useState({
     marque: "",
     modele: "",
-    annee_prod: "",
     reseau: "",
     ram_go: "",
     stockage_go: "",

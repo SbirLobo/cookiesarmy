@@ -5,14 +5,19 @@ import { useInfoMobile } from "../contexts/InfoMobileContext";
 function EnregistrerTel1() {
   const { mobile, handleChangeMobile } = useInfoMobile();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <Layout className="border-2 border-quaternary px-3 m-5">
       <div className="flex justify-between items-center">
         <h4 className="text-secondary font-bold p-4">1/3</h4>
-        <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        <Link to="/home">
+          <img src="../public/assets/favicon/croix.png" alt="Quitter" />
+        </Link>
       </div>
       <h2 className="font-bold">Caractéristiques techniques du smartphone:</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
             <label htmlFor="marque">Marque* : </label>
@@ -41,20 +46,20 @@ function EnregistrerTel1() {
         </div>
 
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
-          <div>
-            <label htmlFor="annee">Année* : </label>
+          {/* <div>
+            <label htmlFor="annee_prod">Année* :</label>
             <br />
             <input
               type="text"
               name="annee_prod"
-              id="annee"
+              id="annee_prod"
               placeholder="Format JJ/MM/AAAA"
               className="rounded border w-36 sm:w-52  md:w-72"
               pattern="\d{2}/\d{2}/\d{4}"
               value={mobile.annee_prod}
               onChange={handleChangeMobile}
             />
-          </div>
+          </div> */}
           <div>
             <label htmlFor="reseau">Réseau* : </label>
             <br />
@@ -120,7 +125,7 @@ function EnregistrerTel1() {
         <div className="flex justify-center m-5">
           <Link to="/enregistrer2">
             <button
-              type="button"
+              type="submit"
               className="bg-tertiary text-quinary rounded-full w-32"
             >
               Suivant

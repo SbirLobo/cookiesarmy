@@ -15,11 +15,12 @@ export function InfoUserProvider({ children }) {
 
   const [user, setUser] = useState({
     firstname: "",
+    lastname: "",
     email: "",
     password: "",
   });
 
-  const handleChangeLogIn = (e) => {
+  const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
@@ -52,7 +53,7 @@ export function InfoUserProvider({ children }) {
       value={{
         loggedInUser,
         handleSubmitLogIn,
-        handleChangeLogIn,
+        handleChange,
         handleClickLogOut,
       }}
     >
