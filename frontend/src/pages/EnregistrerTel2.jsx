@@ -72,15 +72,21 @@ function EnregistrerTel2() {
           <div>
             <label htmlFor="taille">Taille d'écran : </label>
             <br />
-            <input
+            <select
               type="text"
               name="taille_p"
-              id="taille"
+              id="taille_p"
               className="rounded border w-36 sm:w-52  md:w-72"
-              placeholder="En pouce"
               value={mobile.taille_p}
               onChange={handleChangeMobile}
-            />
+            >
+              <option value="0">---</option>
+              <option value="5">5''</option>
+              <option value="6">6''</option>
+              <option value="7">7''</option>
+              <option value="8">8''</option>
+              <option value="9">9''</option>
+            </select>
           </div>
           <div className="gap-5 items-center flex">
             <label htmlFor="sim">Double Sim</label>
@@ -93,8 +99,8 @@ function EnregistrerTel2() {
               className="rounded border"
             >
               <option value="na">---</option>
-              <option value="non">Non</option>
-              <option value="oui">Oui</option>
+              <option value="0">false</option>
+              <option value="1">true</option>
             </select>
           </div>
         </div>
@@ -121,9 +127,8 @@ function EnregistrerTel2() {
               onChange={handleChangeMobile}
               className="rounded border"
             >
-              <option value="na">---</option>
-              <option value="non">Non</option>
-              <option value="oui">Oui</option>
+              <option value="false">Non</option>
+              <option value="true">Oui</option>
             </select>
           </div>
         </div>

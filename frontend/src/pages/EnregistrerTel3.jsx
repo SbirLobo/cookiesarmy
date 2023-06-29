@@ -28,21 +28,6 @@ function EnregistrerTel3() {
       <form onChange={handleSubmit}>
         <div className="flex flex-wrap justify-between p-3 lg:px-24">
           <div>
-            <label htmlFor="vendu">Vendu* : </label>
-            <br />
-            <select
-              name="vendu"
-              className="rounded border w-36 sm:w-52  md:w-72"
-              id="etat"
-              value={mobile.vendu}
-              onChange={handleChangeMobile}
-            >
-              <option value="vide">---</option>
-              <option value="Oui">Vendu</option>
-              <option value="Non">En stock</option>
-            </select>
-          </div>
-          <div>
             <label htmlFor="ville">Ville* : </label>
             <br />
             <input

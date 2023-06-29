@@ -22,7 +22,6 @@ export function InfoMobileProvider({ children }) {
     double_sim: "",
     couleur: "",
     ecouteurs: "",
-    vendu: "",
     ville: "",
     date_entree: "",
     commentaire: "",

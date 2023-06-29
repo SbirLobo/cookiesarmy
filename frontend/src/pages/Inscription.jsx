@@ -1,7 +1,7 @@
-import Layout from "../components/Layout";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Layout from "../components/Layout";
 
 function Inscription() {
   // const API = `${import.meta.env.VITE_BACKEND_URL}/isncription`;
