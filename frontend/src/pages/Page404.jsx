@@ -11,7 +11,7 @@ function Page404() {
         />
         <Link to="/" className="flex items-center">
           <img
-            src="../src/assets/maison.png"
+            src="../src/assets/images/maison.png"
             alt="logo home"
             className="w-4 h-4 mr-4"
           />
