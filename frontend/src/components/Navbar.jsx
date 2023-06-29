@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useInfoUser } from "../contexts/InfoUserContext";
 
 function Navbar() {
+  const { loggedInUser, handleClickLogOut } = useInfoUser();
   return (
     <div className="flex w-[25%] flex-row max-lg:hidden">
       <div className="flex w-full flex-col justify-between items-center border-r-[2px] border-primary">
@@ -36,8 +38,12 @@ function Navbar() {
             alt="vector"
             className="w-4 h-4"
           />
-          <h2 className="text-xs">J.Doe</h2>
-          <img src="../src/assets/connection.png" alt="connection" />
+          <h2 className="text-xs">
+            {loggedInUser !== "" ? loggedInUser : "Déconnecté"}
+          </h2>
+          <button type="button" onClick={handleClickLogOut}>
+            <img src="../src/assets/connection.png" alt="connection" />
+          </button>
         </div>
       </div>
     </div>
