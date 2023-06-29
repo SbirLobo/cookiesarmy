@@ -10,9 +10,9 @@ export function InfoMobileProvider({ children }) {
   const API = `http://localhost:5200/mobiles`;
   const navigate = useNavigate();
   const current = new Date();
-  const date = `${current.getDate()}/${
+  const date = `${current.getFullYear()}/${
     current.getMonth() + 1
-  }/${current.getFullYear()}`;
+  }/${current.getDate()}`;
 
   const [mobile, setMobile] = useState({
     marque: "",
@@ -29,6 +29,7 @@ export function InfoMobileProvider({ children }) {
     ville: "",
     date_entree: date,
     commentaire: "",
+    prix: 0,
   });
 
   const handleChangeMobile = (e) => {

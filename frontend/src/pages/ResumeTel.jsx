@@ -108,7 +108,7 @@ function ResumeTel() {
             </li>
           </ul>
           <div className="flex flex-col justify-center items-center">
-            <img src={mobile.image} alt={mobile.modele} />
+            {/* <img src={mobile.image} alt={mobile.modele} /> */}
             <h2 className="p-5 border text-center border-quinary shadow-lg rounded">
               Prix conseillé: <br />
               <span className="text-secondary font-blod">{mobile.prix} €</span>
