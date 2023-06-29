@@ -11,6 +11,7 @@ import { CurrentFormProvider } from "./components/CurrentFormContext";
 import Inscription from "./pages/Inscription"
 import TableauSmartphones from "./pages/TableauSmartphones";
 import Faq from "./pages/FAQ";
+import UserProfile from "./pages/ProfileUser";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/resume" element={<ResumeTel />} />
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/TableauSmartphones" element={<TableauSmartphones />} />
+        <Route path="/ProfileUser" element={<UserProfile />} />
         <Route path="/FAQ" element={<Faq />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
