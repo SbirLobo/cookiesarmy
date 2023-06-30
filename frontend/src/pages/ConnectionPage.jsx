@@ -19,7 +19,7 @@ function ConnectionPage() {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-center md:justify-between flex-wrap md:mx-16 lg:mx-32 xl:mx-56">
+      <div className="flex items-center justify-between flex-wrap mx-16">
         <img
           className="hidden md:block"
           src="../public/assets/images/jacqueline.png"

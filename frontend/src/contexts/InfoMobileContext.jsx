@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 const InfoMobileContext = createContext();
 
@@ -41,7 +42,7 @@ export function InfoMobileProvider({ children }) {
       .post(API, { ...mobile }, { withCredentials: true })
       .then((res) => {
         console.warn(res.data.message);
-        window.location.href = "/home";
+        Navigate("/home");
       })
       .catch((err) => console.error(err.response.data.message));
   };
