@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const InfoMobileContext = createContext();
 
 export function InfoMobileProvider({ children }) {
   // const API = `${import.meta.env.VITE_BACKEND_URL}/mobiles`;
   const API = `http://localhost:5200/mobiles`;
+  const navigate = useNavigate();
   const current = new Date();
   const date = `${current.getFullYear()}/${
     current.getMonth() + 1
@@ -42,7 +43,7 @@ export function InfoMobileProvider({ children }) {
       .post(API, { ...mobile }, { withCredentials: true })
       .then((res) => {
         console.warn(res.data.message);
-        Navigate("/home");
+        navigate("/home");
       })
       .catch((err) => console.error(err.response.data.message));
   };
