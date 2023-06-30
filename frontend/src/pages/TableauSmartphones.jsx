@@ -54,7 +54,7 @@ function TableauSmartphones() {
       setFilteredSmartphones(smartphones);
     } else {
       const filteredItems = smartphones.filter(
-        (smartphone) => smartphone.catégorie === selectedFilter
+        (smartphone) => smartphone.aspect === selectedFilter
       );
       setFilteredSmartphones(filteredItems);
     }
@@ -71,7 +71,7 @@ function TableauSmartphones() {
       setFilteredSmartphones(smartphones);
     } else {
       const filteredItems = smartphones.filter(
-        (smartphone) => smartphone.stockage === selectedStorage
+        (smartphone) => smartphone.stockage_go === parseInt(selectedStorage, 10)
       );
       setFilteredSmartphones(filteredItems);
     }
@@ -88,7 +88,7 @@ function TableauSmartphones() {
       (smartphone) =>
         smartphone.marque.toLowerCase().includes(searchQuery.toLowerCase()) ||
         smartphone.ville.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        smartphone.modèle.toLowerCase().includes(searchQuery.toLowerCase())
+        smartphone.modele.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     setFilteredSmartphones(filteredItems);
@@ -115,13 +115,6 @@ function TableauSmartphones() {
       <div className="inline-block">
         <h1 className="font-bold text-5xl p-5">Base de données</h1>
 
-        {/* Bouton "Importer un fichier" */}
-        <button
-          type="button"
-          className="bg-secondary text-quinary py-1 px-1 ml-20 mb-4 rounded-md font-raleway font-thin"
-        >
-          Importer un fichier
-        </button>
         <div className="flex justify-center space-x-10 m-2">
           {/* Filtre */}
           <div className="my-2">
@@ -135,9 +128,9 @@ function TableauSmartphones() {
               className="border border-gray-300 px-2 py-1 rounded-md"
             >
               <option value="Tous">Tous</option>
-              <option value="Bon état">Bon état</option>
-              <option value="Très bon état">Correct</option>
-              <option value="Mauvais état">Mauvais état</option>
+              <option value="BE">Bon état</option>
+              <option value="correct">Correct</option>
+              <option value="ME">Mauvais état</option>
             </select>
           </div>
           <div className="my-2">
@@ -151,10 +144,15 @@ function TableauSmartphones() {
               className="border border-gray-300 px-2 py-1 rounded-md"
             >
               <option value="Tous">Tous</option>
-              <option value="64 Go">64 Go</option>
-              <option value="128 Go">128 Go</option>
-              <option value="256 Go">256 Go</option>
-              <option value="512 Go">512 Go</option>
+              <option value="4">4 Go</option>
+              <option value="8">8 Go</option>
+              <option value="16">16 Go</option>
+              <option value="32">32 Go</option>
+              <option value="64">64 Go</option>
+              <option value="128">128 Go</option>
+              <option value="256">256 Go</option>
+              <option value="512">512 Go</option>
+              <option value="1024">1024 Go</option>
             </select>
           </div>
 
@@ -196,11 +194,11 @@ function TableauSmartphones() {
                   key={smartphone.id}
                   className={index % 2 === 0 ? "bg-grey" : "bg-grey/20"}
                 >
-                  <td className="py-1 px-4 font-thin">
+                  <td className="py-1 px-4">
                     <img
                       src={smartphone.image}
                       alt={smartphone.modele}
-                      className="h-8 w-8"
+                      className=""
                     />
                   </td>
                   <td className="py-1 px-4">{smartphone.marque}</td>
