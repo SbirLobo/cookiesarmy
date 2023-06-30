@@ -12,9 +12,8 @@ import { InfoMobileProvider } from "./contexts/InfoMobileContext";
 import Inscription from "./pages/Inscription";
 import TableauSmartphones from "./pages/TableauSmartphones";
 import Faq from "./pages/FAQ";
-import Smartphone from "./pages/Smartphone";
 import UserProfile from "./pages/ProfileUser";
-import ModifTel from "./pages/ModifTel";
+
 
 function App() {
   return (
@@ -31,9 +30,7 @@ function App() {
           <Route path="/TableauSmartphones" element={<TableauSmartphones />} />
           <Route path="/ProfileUser" element={<UserProfile />} />
           <Route path="/FAQ" element={<Faq />} />
-          <Route path="/smartphone" element={<Smartphone />} />
           <Route path="*" element={<Page404 />} />
-          <Route path="/modifier" element={<ModifTel />} />
         </Routes>
       </InfoMobileProvider>
     </InfoUserProvider>
