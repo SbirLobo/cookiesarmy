@@ -1,43 +1,65 @@
-# MVC Express
+<!-- Header section -->
 
-## Description
+  <h1 align="center">Emmaus Connect <img src="./frontend/public/assets/icons/logo2.svg" width="100px" height="100px" alt="logo"></h1>
 
-This repository is a simple Express MVC structure from scratch.
+### 🧰 Languages & Frameworks used :
 
-## Steps
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,react,tailwind,mysql,express&theme=dark" />
+  </a>
+</p>
+</br>
+</br>
 
-1. Clone the repo from Github.
-2. Run `npm install` or `yarn install`.
-3. Create _.env_ from _.env.sample_ file and add your DB parameters. Don't delete the _.sample_ file, it must be kept.
+### 🖥️ Software & Tools used :
 
-```
-DB_HOST=your_db_host
-DB_PORT=your_db_port
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
-DB_NAME=your_db_name
-```
+<p>
+<img alt="Visual Studio Code" style="padding-right:0.5rem;" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white"/>
+<img alt="Git" style="padding-right:0.5rem;" src="https://img.shields.io/badge/Git-F05033.svg?logo=git&logoColor=white"/>
+<img alt="Bash" style="padding-right:0.5rem;" src="https://img.shields.io/badge/Bash-4EAA25.svg?logo=gnu-bash&logoColor=white"/>
+<img alt="GitHub Desktop" style="padding-right:0.5rem;" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white"/>
+<img alt="Clickup" src="https://img.shields.io/badge/Clickup-7B68EE.svg?logo=clickup&logoColor=white"/>
+<img alt="Figma" style="padding-right:0.5rem;" src="https://img.shields.io/badge/-Figma-F24E1E.svg?logo=figma&logoColor=white"/>
+<img alt="Discord" style="padding-right:0.5rem;" src="https://img.shields.io/badge/-Discord-5865F2.svg?logo=discord&logoColor=white"/>
+<img alt="Google suite" style="padding-right:0.5rem;" src="https://img.shields.io/badge/-Google Suite-yellow.svg?logo=meistertask&logoColor=white"/>
+</p>
+</br>
 
-4. Adapt _database.sql_ with your own tables. Import the script in your SQL server. You can do it manually or run _migrate_ script (either using `npm run migrate` or `yarn run migrate`).
-5. Start the server in dev mode with `npm run dev` or `yarn run dev`. This will run `index.js` using _nodemon_.
-6. Go to `localhost:5000` with your favorite browser.
-7. From this starter kit, create your own web application.
+#
 
-### Windows Users
+### 👨‍💻 Team of developers :
 
-If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
+- Chloé Elle: https://github.com/Chl0l
+- Oyhana Mahjoubi: https://github.com/OyhanaM
+- Enzo Castagnos: https://github.com/enzocastagnos
+- Sébastien Birolleau: https://github.com/SbirLobo
+- Youcef Aissat: https://github.com/YouceF-dz16
 
-`git config --global core.autocrlf true`
+</br>
 
-## Example
+## Concept
 
-An example (a basic list of items) is provided (you can load the _database.sql_ file in a test database). The accessible URLs are :
+Emmaüs Connect travaille au quotidien sur l'inclusion au numérique.
 
-- Home page: [GET localhost:5000/](localhost:5000/)
-- Item browse: [GET localhost:5000/items](localhost:5000/items)
-- Item read: [GET localhost:5000/items/:id](localhost:5000/items/2)
-- Item edit: PUT localhost:5000/items/:id
-- Item add: POST localhost:5000/items
-- Item deletion: DELETE localhost:5000/items/:id
+Emmaüs Connect vend donc des biens électroniques et notamment des smartphones pour répondre à ce besoin.
 
-You can find all these routes declared in the file `src/router.js`. You can add your own new routes, controllers and models.
+L’objectif est de développer un outil de classification des smartphones afin de générer un prix de vente selon leurs caractéristiques (RAM, stockage, etc)
+
+## Setup & Use
+
+npm run setupto install all dependencies (back and front)
+npm run dev to start the server
+
+## Technologies
+
+# We produced our application with :
+
+React
+NodeJS
+Express
+MySQL
+TailwindCSS
+CSS / JavaScript / JSX
+
+<em><strong>Note</strong>: This project has been created for a 48-hours Hackaton</em>

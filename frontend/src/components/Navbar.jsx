@@ -7,31 +7,44 @@ function Navbar() {
     <div className="flex w-[25%] flex-row max-md:hidden">
       <div className="flex w-full flex-col justify-between items-center border-r-[2px] border-primary">
         <div className="">
-          <Link to="/home">
-            <img
-              src="../src/assets/logo.png"
-              alt="logo"
-              className="mt-8 w-40"
-            />
-          </Link>
+          {loggedInUser !== "" && (
+            <Link to="/home">
+              <img
+                src="../src/assets/logo.png"
+                alt="logo"
+                className="mt-8 w-40"
+              />
+            </Link>
+          )}
+          {loggedInUser === "" && (
+            <Link to="/">
+              <img
+                src="../src/assets/logo.png"
+                alt="logo"
+                className="mt-8 w-40"
+              />
+            </Link>
+          )}
         </div>
-        <div className="w-[8rem] text-primary h-1/3 flex flex-col items-center justify-around gap-4 font-semibold">
-          <Link to="/enregistrer1" className="w-full text-center">
-            <h2 className="text-xs py-3 p-1 my-4 hover:text-primary hover:bg-tertiary hover:rounded-full">
-              Ajout mobile
-            </h2>
-          </Link>
-          <Link to="/TableauSmartphones" className="w-full text-center">
-            <h2 className="text-xs py-3 p-1 my-4 hover:text-quinary hover:bg-secondary hover:rounded-full">
-              Base de données
-            </h2>
-          </Link>
-          <Link to="/FAQ" className="w-full text-center">
-            <h2 className="text-xs py-3 p-1 my-4 hover:text-primary hover:bg-quaternary hover:rounded-full">
-              FAQ
-            </h2>
-          </Link>
-        </div>
+        {loggedInUser !== "" && (
+          <div className="w-[8rem] text-primary h-1/3 flex flex-col items-center justify-around gap-4 font-semibold">
+            <Link to="/enregistrer1" className="w-full text-center">
+              <h2 className="text-xs py-3 p-1 my-4 hover:text-primary hover:bg-tertiary hover:rounded-full">
+                Ajout mobile
+              </h2>
+            </Link>
+            <Link to="/TableauSmartphones" className="w-full text-center">
+              <h2 className="text-xs py-3 p-1 my-4 hover:text-quinary hover:bg-secondary hover:rounded-full">
+                Base de données
+              </h2>
+            </Link>
+            <Link to="/FAQ" className="w-full text-center">
+              <h2 className="text-xs py-3 p-1 my-4 hover:text-primary hover:bg-quaternary hover:rounded-full">
+                FAQ
+              </h2>
+            </Link>
+          </div>
+        )}
         <div className="flex w-[8rem] justify-between items-center mb-[4rem]">
           <img
             src="../src/assets/Vector.png"

@@ -45,33 +45,32 @@ function BurgerMenu() {
       {active && (
         <menu
           ref={menuRef}
-          className="flex flex-col gap-4 absolute top-full right-0"
+          className="bg-[white] font-bold w-[200px] border-primary border-l-2 border-y-2 p-4 flex flex-col rounded-l-md absolute top-full right-0"
         >
+          <img src="./src/assets/head.png" alt="head" className="w-14" />
           <ul>
-            <li>
+            <li className="text-base py-8">
               <Link to="/">
-                <span className="text-[0.8rem]">Accueil</span>
+                <span className="text-[0.8rem] text-primary">Accueil</span>
               </Link>
             </li>
-            <li>
+            <li className="text-base py-8">
               <Link to="/enregistrer1">
                 <span className="text-[0.8rem] text-secondary">
-                  Ajouter un smartphone
+                  Ajouter mobile
                 </span>
               </Link>
             </li>
-            <li className="text-base">
+            <li className="text-base py-8">
               <Link to="/TableauSmartphones">
                 <span className="text-[0.8rem] text-quaternary">
-                  Gérer les smartphone
+                  Base de données
                 </span>
               </Link>
             </li>
-            <li className="text-base">
+            <li className="text-base py-8">
               <Link to="/FAQ">
-                <span className="text-[0.8rem] text-tertiary">
-                  Foire aux questions
-                </span>
+                <span className="text-[0.8rem] text-tertiary">FAQ</span>
               </Link>
             </li>
           </ul>
