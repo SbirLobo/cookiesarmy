@@ -39,12 +39,22 @@ function ResumeTel() {
   }
   useEffect(() => {
     const nextMobile = mobile;
+    if (mobile.ecouteurs === "true") {
+      mobile.ecouteurs = true;
+    } else {
+      mobile.ecouteurs = false;
+    }
+    if (mobile.double_sim === "true") {
+      mobile.double_sim = true;
+    } else {
+      mobile.double_sim = false;
+    }
     nextMobile.prix = parametresPrix.prix[nextCategorie];
     setMobile(nextMobile);
     setIsLoading(false);
   }, [nextCategorie]);
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <p>Loading..</p>;
 
   return (
     <Layout>

@@ -45,7 +45,7 @@
   }
 }
 .burgerline {
-  background: theme("colors.primary");
+  background-color: theme("colors.primary");
   border-radius: 10px;
   height: 7px;
   margin: 4px 0;
