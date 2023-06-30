@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
+  const { loggedInUser, handleClickLogOut } = useInfoUser();
   return (
-    <div className="navbar flex w-[25%] flex-row">
+    <div className="flex w-[25%] flex-row max-md:hidden">
       <div className="flex w-full flex-col justify-between items-center border-r-[2px] border-primary">
         <div className="">
           <Link to="/home">

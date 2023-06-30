@@ -13,6 +13,7 @@ function EnregistrerTel1() {
   useEffect(() => {
     if (
       mobile.marque !== "" &&
+      mobile.modele !== "" &&
       mobile.reseau !== "" &&
       mobile.ram_go !== 0 &&
       mobile.stockage_go !== 0 &&
