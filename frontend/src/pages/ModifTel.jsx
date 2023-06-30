@@ -1,7 +1,7 @@
-import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
 
-const ModifTel = () => {
+function ModifTel() {
   return (
     <Layout>
       <div className="border-2 border-tertiary m-10">
@@ -67,6 +67,6 @@ const ModifTel = () => {
       </div>
     </Layout>
   );
-};
+}
 
 export default ModifTel;

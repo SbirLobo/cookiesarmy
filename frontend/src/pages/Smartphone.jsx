@@ -1,7 +1,7 @@
-import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
 
-const Smartphone = () => {
+function Smartphone() {
   return (
     <Layout>
       <div className="border-2 border-secondary m-10">
@@ -67,6 +67,6 @@ const Smartphone = () => {
       </div>
     </Layout>
   );
-};
+}
 
 export default Smartphone;

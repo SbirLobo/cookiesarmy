@@ -27,7 +27,6 @@ export function InfoMobileProvider({ children }) {
     ville: "",
     date_entree: date,
     commentaire: "",
-    prix: "",
     prix: 0,
   });
 
