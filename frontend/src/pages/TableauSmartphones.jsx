@@ -115,13 +115,6 @@ function TableauSmartphones() {
       <div className="inline-block">
         <h1 className="font-bold text-5xl p-5">Base de données</h1>
 
-        {/* Bouton "Importer un fichier" */}
-        <button
-          type="button"
-          className="bg-secondary text-quinary py-1 px-1 ml-20 mb-4 rounded-md font-raleway font-thin"
-        >
-          Importer un fichier
-        </button>
         <div className="flex justify-center space-x-10 m-2">
           {/* Filtre */}
           <div className="my-2">
