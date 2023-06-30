@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
-import Loading from "../components/Loading";
 
 import parametresPrix from "../services/parametresPrix";
 
