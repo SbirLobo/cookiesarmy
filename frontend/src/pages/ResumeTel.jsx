@@ -1,12 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useInfoMobile } from "../contexts/InfoMobileContext";
+import Loading from "../components/Loading";
 
 import parametresPrix from "../services/parametresPrix";
 
 function ResumeTel() {
   const { mobile, handleSubmit, setMobile } = useInfoMobile();
+  const [isLoading, setIsLoading] = useState(true);
   let nextCategorie = 0;
 
   const basePoints =
@@ -40,7 +42,10 @@ function ResumeTel() {
     const nextMobile = mobile;
     nextMobile.prix = parametresPrix.prix[nextCategorie];
     setMobile(nextMobile);
-  }, []);
+    setIsLoading(false);
+  }, [nextCategorie]);
+
+  if (isLoading) return <Loading />;
 
   return (
     <Layout>
