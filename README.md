@@ -38,6 +38,14 @@
 
 </br>
 
+## Concept
+
+Emmaüs Connect travaille au quotidien sur l'inclusion au numérique.
+
+Emmaüs Connect vend donc des biens électroniques et notamment des smartphones pour répondre à ce besoin.
+
+L’objectif est de développer un outil de classification des smartphones afin de générer un prix de vente selon leurs caractéristiques (RAM, stockage, etc)
+
 ## Setup & Use
 
 npm run setupto install all dependencies (back and front)
